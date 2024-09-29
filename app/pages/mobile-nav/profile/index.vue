@@ -4,9 +4,9 @@
 </script>
 
 <template>
-<div>
-	profile
-</div>
+	<div>
+		profile
+	</div>
 </template>
 
 <style scoped>

@@ -4,9 +4,9 @@
 </script>
 
 <template>
-<div>
-	messages
-</div>
+	<div>
+		messages
+	</div>
 </template>
 
 <style scoped>

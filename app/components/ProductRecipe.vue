@@ -66,7 +66,8 @@ defineProps<Props>()
 				<div class="font-bold text-lg uppercase">Ingredients</div>
 				<div v-for="ing in ingredients"
 					class="flex items-center gap-2">
-					<input class="w-4 h-4 text-yellow-500 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500" type="checkbox"/>
+					<input class="w-4 h-4 text-yellow-500 bg-gray-100 border-gray-300 rounded focus:ring-yellow-500"
+						type="checkbox"/>
 					<div>{{ ing }}</div>
 				</div>
 			</div>

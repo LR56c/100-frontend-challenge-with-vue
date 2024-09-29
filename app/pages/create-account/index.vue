@@ -36,18 +36,21 @@ import CreateAccountInput from '~/components/CreateAccountInput.vue'
 					<span class="text-gray-400 font-bold">
 						Already have an account?
 					</span>
-						<NuxtLink to="/" class="text-blue-600 font-bold">
+						<NuxtLink to="/"
+							class="text-blue-600 font-bold">
 							Sign In
 						</NuxtLink>
 					</div>
 					<div class="h-full"></div>
-					<button class="bg-blue-600 w-full rounded-full shadow-md shadow-indigo-500 text-white py-2" type="submit">
+					<button class="bg-blue-600 w-full rounded-full shadow-md shadow-indigo-500 text-white py-2"
+						type="submit">
 						Create account
 					</button>
 				</form>
 			</div>
 		</div>
-		<spline-viewer class="w-screen h-screen" url="https://prod.spline.design/uxEyws6yJWpT-Oef/scene.splinecode"></spline-viewer>
+		<spline-viewer class="w-screen h-screen"
+			url="https://prod.spline.design/uxEyws6yJWpT-Oef/scene.splinecode"></spline-viewer>
 	</div>
 </template>
 

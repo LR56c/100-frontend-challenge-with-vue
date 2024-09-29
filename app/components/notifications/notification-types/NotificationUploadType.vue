@@ -39,7 +39,7 @@ defineProps<NotificationUploadTypeProps>()
 						</div>
 					</div>
 					<div class="line-clamp-2 text-xs text-gray-400">{{
-							a.description
+						a.description
 						}}
 					</div>
 				</div>
@@ -48,14 +48,17 @@ defineProps<NotificationUploadTypeProps>()
 					<img class="w-14 h-14 rounded-2xl"
 						:src="a.uploadImage"/>
 					<div class="flex flex-col justify-center w-full">
-						<div class="font-semibold text-sm text-purple-800">{{ a.title }}</div>
+						<div class="font-semibold text-sm text-purple-800">{{ a.title }}
+						</div>
 						<div class="line-clamp-2 text-xs text-gray-400 space-x-1">
 							<span>{{a.fileExtension }}</span>
 							<span>-</span>
 							<span>{{a.fileSize }}</span>
 						</div>
 					</div>
-					<Icon size="20" name="ic-baseline-file-download" class="basis-[10%]"/>
+					<Icon size="20"
+						name="ic-baseline-file-download"
+						class="basis-[10%]"/>
 				</div>
 			</div>
 		</div>

@@ -1,19 +1,16 @@
 <script setup
 	lang="ts">
 
-import type { DateRange } from 'radix-vue'
-import { toDate } from 'radix-vue/date'
 import {
 	CalendarDate,
 	DateFormatter,
 	type DateValue,
 	getLocalTimeZone,
-	parseDate,
 	today
 } from '@internationalized/date'
 import { Calendar as CalendarIcon } from 'lucide-vue-next'
+import { toDate } from 'radix-vue/date'
 import { Calendar } from '~/components/ui/calendar'
-import { Input } from '~/components/ui/input'
 import { Label } from '~/components/ui/label'
 import {
 	Popover,
@@ -30,9 +27,9 @@ const start = today( getLocalTimeZone() )
 const end   = start.add( { days: 7 } )
 
 const placeholder = ref()
-const startValue = ref<DateValue>( start )
-const endValue   = ref<DateValue>( end )
-const ages = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+const startValue  = ref<DateValue>( start )
+const endValue    = ref<DateValue>( end )
+const ages        = [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 </script>
 
 <template>

@@ -1,23 +1,33 @@
-<script lang="ts" setup>
-import { type HTMLAttributes, computed } from 'vue'
-import { CalendarCellTrigger, type CalendarCellTriggerProps, useForwardProps } from 'radix-vue'
+<script lang="ts"
+	setup>
 import { buttonVariants } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
+import {
+	CalendarCellTrigger,
+	type CalendarCellTriggerProps,
+	useForwardProps
+} from 'radix-vue'
+import {
+	computed,
+	type HTMLAttributes
+} from 'vue'
 
-const props = defineProps<CalendarCellTriggerProps & { class?: HTMLAttributes['class'] }>()
+const props = defineProps<CalendarCellTriggerProps & {
+	class?: HTMLAttributes['class']
+}>()
 
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
+const delegatedProps = computed( () => {
+	const { class: _, ...delegated } = props
 
-  return delegated
-})
+	return delegated
+} )
 
-const forwardedProps = useForwardProps(delegatedProps)
+const forwardedProps = useForwardProps( delegatedProps )
 </script>
 
 <template>
-  <CalendarCellTrigger
-    :class="cn(
+	<CalendarCellTrigger
+		:class="cn(
       buttonVariants({ variant: 'ghost' }),
       'h-9 w-9 p-0 font-normal',
       '[&[data-today]:not([data-selected])]:bg-accent [&[data-today]:not([data-selected])]:text-accent-foreground',
@@ -31,8 +41,8 @@ const forwardedProps = useForwardProps(delegatedProps)
       'data-[outside-view]:text-muted-foreground data-[outside-view]:opacity-50 [&[data-outside-view][data-selected]]:bg-accent/50 [&[data-outside-view][data-selected]]:text-muted-foreground [&[data-outside-view][data-selected]]:opacity-30',
       props.class,
     )"
-    v-bind="forwardedProps"
-  >
-    <slot />
-  </CalendarCellTrigger>
+		v-bind="forwardedProps"
+	>
+		<slot/>
+	</CalendarCellTrigger>
 </template>

@@ -4,9 +4,9 @@
 </script>
 
 <template>
-<div>
-	chart
-</div>
+	<div>
+		chart
+	</div>
 </template>
 
 <style scoped>

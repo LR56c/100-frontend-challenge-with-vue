@@ -6,12 +6,12 @@ import NotificationButton
 </script>
 
 <template>
-<div class="w-screen h-screen bg-gray-200">
-	<div class="w-full h-20 bg-white flex justify-between items-center p-4">
-		<div>Nav</div>
-		<NotificationButton></NotificationButton>
+	<div class="w-screen h-screen bg-gray-200">
+		<div class="w-full h-20 bg-white flex justify-between items-center p-4">
+			<div>Nav</div>
+			<NotificationButton></NotificationButton>
+		</div>
 	</div>
-</div>
 </template>
 
 <style scoped>
