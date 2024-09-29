@@ -73,6 +73,11 @@ const list = ref<ChallengeCardProps[]>([
 		link: '/shopping-list',
 		img: 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/shopping-list.jpeg?t=1719059650980',
 		day: 14
+	},
+	{
+		link: '/notifications',
+		img: 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/notifications.jpeg?t=1719059649337',
+		day: 15
 	}
 ])
 
@@ -80,7 +85,7 @@ const list = ref<ChallengeCardProps[]>([
 
 <template>
 		<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
-			<ChallengeCard v-for="c in list" :link="c.link" :img="c.img" :day="c.day"></ChallengeCard>
+			<ChallengeCard v-for="(c, i) in list" :link="c.link" :img="c.img" :day="i + 1"></ChallengeCard>
 		</div>
 </template>
 
