@@ -82,6 +82,10 @@ const list = ref<ChallengeCardProps[]>( [
 		link: '/fur-friends',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/fur-friends.jpeg?t=1719059648095',
 		day : 16
+	},{
+		link: '/article-slider',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/article-slider.jpeg?t=1719059650358',
+		day : 17
 	}
 ] )
 
