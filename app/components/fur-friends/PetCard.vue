@@ -24,7 +24,7 @@ const heartStatus = defineModel( 'like', {
 </script>
 
 <template>
-	<NuxtLink :to="slug">
+	<NuxtLink :to="`fur-friends/${slug}`">
 		<div class="flex gap-2 shadow-lg rounded-2xl items-center pr-2">
 			<div class="flex w-full gap-2">
 				<img class="w-20 h-20 object-cover object-center rounded-2xl"
