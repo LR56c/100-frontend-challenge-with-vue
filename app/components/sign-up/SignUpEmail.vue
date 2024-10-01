@@ -1,7 +1,6 @@
 <script setup
 	lang="ts">
 
-import CreateAccountInput from '~/components/CreateAccountInput.vue'
 import FloatingInput from '~/components/sign-up/FloatingInput.vue'
 import SocialSignInButton from '~/components/sign-up/SocialSignInButton.vue'
 </script>
@@ -24,7 +23,9 @@ import SocialSignInButton from '~/components/sign-up/SocialSignInButton.vue'
 			type="password"
 		></FloatingInput>
 		<button
-			class="bg-black flex items-center w-full text-white rounded-2xl p-2 justify-center">Sign Up</button>
+			class="bg-black flex items-center w-full text-white rounded-2xl p-2 justify-center">
+			Sign Up
+		</button>
 		<div>Already have an account?
 			<span class="font-bold text-blue-600">Log In</span>
 		</div>

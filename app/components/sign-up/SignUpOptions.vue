@@ -9,7 +9,7 @@ const methodsOptions = [
 ]
 
 const emit = defineEmits<{
-	methodSelected : [ string ]
+	methodSelected: [ string ]
 }>()
 </script>
 

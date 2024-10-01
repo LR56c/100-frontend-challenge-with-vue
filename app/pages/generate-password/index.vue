@@ -69,14 +69,16 @@ const onGeneratePassword = () => {
 		const typeProb = Math.floor( Math.random() * selectedTypes.length )
 		passwordResult += pickRandomChar( selectedTypes[typeProb]! )
 	}
-	console.log(passwordResult)
+	console.log( passwordResult )
 	passwordRef.value = shuffleString( passwordResult )
-	console.log(passwordRef.value)
+	console.log( passwordRef.value )
 	// passwordRef.value = passwordResult
 }
 
 const shuffleString = ( s: string ): string => {
-	return s.split( '' ).sort( () => Math.random() - 0.5 ).join( '' )
+	return s.split( '' )
+	        .sort( () => Math.random() - 0.5 )
+	        .join( '' )
 }
 
 const pickRandomChar = ( type: string ) => {

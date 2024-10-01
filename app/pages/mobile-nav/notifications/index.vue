@@ -4,9 +4,9 @@
 </script>
 
 <template>
-<div>
-	notifications
-</div>
+	<div>
+		notifications
+	</div>
 </template>
 
 <style scoped>

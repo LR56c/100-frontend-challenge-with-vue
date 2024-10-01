@@ -1,8 +1,7 @@
 <script setup
 	lang="ts">
 
-import TaskAvatar from '~/components/task-board/TaskAvatar.vue'
-import TaskCard, { type TaskCardProps } from '~/components/task-board/TaskCard.vue'
+import { type TaskCardProps } from '~/components/task-board/TaskCard.vue'
 import TaskColumn from '~/components/task-board/TaskColumn.vue'
 
 const data = ref( new Map<string, TaskCardProps[]>(

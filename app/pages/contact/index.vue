@@ -11,7 +11,7 @@
 			</div>
 			<div class="text-sm text-white">3629 N Cole Rd, Boise, Illinois</div>
 		</div>
-			<div class="absolute left-[220px] lg:left-[370px] top-[550px] z-0 w-8 h-8 bg-pink-600 rotate-45"></div>
+		<div class="absolute left-[220px] lg:left-[370px] top-[550px] z-0 w-8 h-8 bg-pink-600 rotate-45"></div>
 		<div class="absolute left-[230px] lg:left-[380px] top-[620px] w-3 h-3 bg-pink-500 rounded-full">
 			<div class="absolute -left-1 -top-1 w-5 h-5 bg-pink-500 rounded-full opacity-80 animate-ping"></div>
 		</div>

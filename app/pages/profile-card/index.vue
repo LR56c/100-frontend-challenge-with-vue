@@ -2,7 +2,7 @@
 	lang="ts">
 import SocialCard from '~/components/SocialCard.vue'
 
-const socials : SocialCard[] = [
+const socials: SocialCard[] = [
 	{
 		socialName: 'i-mdi-facebook',
 		socialNick: 'johnnyrogers'

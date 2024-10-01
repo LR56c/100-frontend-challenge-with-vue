@@ -28,9 +28,12 @@ const sizeSelected = ref( 'S' )
 		<div class="flex flex-col gap-4">
 			<img src="https://placehold.co/300x400"/>
 			<div class="lg:hidden flex md:flex-row flex-wrap gap-4 justify-center">
-				<img class="w-fit" src="https://placehold.co/70x100"/>
-				<img class="w-fit" src="https://placehold.co/70x100"/>
-				<img class="w-fit" src="https://placehold.co/70x100"/>
+				<img class="w-fit"
+					src="https://placehold.co/70x100"/>
+				<img class="w-fit"
+					src="https://placehold.co/70x100"/>
+				<img class="w-fit"
+					src="https://placehold.co/70x100"/>
 			</div>
 		</div>
 		<div class="flex flex-col gap-2">
@@ -60,7 +63,8 @@ const sizeSelected = ref( 'S' )
 				</div>
 			</div>
 			<div class="h-full"></div>
-			<button class="uppercase w-full bg-blue-500 text-white py-2">add to bag</button>
+			<button class="uppercase w-full bg-blue-500 text-white py-2">add to bag
+			</button>
 		</div>
 	</div>
 </template>

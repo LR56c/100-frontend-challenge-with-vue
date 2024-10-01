@@ -43,21 +43,21 @@ const events: Events[] = [
 	}
 ]
 
-const route   = useRoute()
-const router   = useRouter()
-const cityRef    = ref('')
+const route      = useRoute()
+const router     = useRouter()
+const cityRef    = ref( '' )
 const countryRef = ref( '' )
 watch( () => route.params.country, ( country ) => {
 	if ( !countryCityPlaces.has( country as unknown as string ) ) {
-		router.replace('/')
+		router.replace( '/' )
 	}
 	else {
 		countryRef.value = country as unknown as string
 		cityRef.value    = countryCityPlaces.get( country as unknown as string )!
 	}
-} , {
-	immediate: true,
-})
+}, {
+	immediate: true
+} )
 const getDayFormat = ( date: Date ): string => {
 	if ( date.toDateString() === new Date().toDateString() ) {
 		return 'Today'
@@ -106,7 +106,8 @@ const randomColors = shuffle( tailwindColors )
 <template>
 	<div class="w-screen h-screen bg-gray-100 flex flex-col justify-center p-4 gap-4">
 		<div class="font-bold text-3xl rounded-2xl">Music events</div>
-		<div>in <span class="capitalize ">{{ cityRef }}</span>, <span class="capitalize ">{{ countryRef }}</span></div>
+		<div>in <span class="capitalize ">{{ cityRef }}</span>,
+			<span class="capitalize ">{{ countryRef }}</span></div>
 		<div class="flex flex-col gap-4">
 			<div class="flex bg-white p-3 rounded-2xl items-center gap-4"
 				v-for="(event, index) in events">
@@ -115,7 +116,10 @@ const randomColors = shuffle( tailwindColors )
 					:class="[randomColors[index]]"
 					class="w-28 h-16 rounded-2xl flex flex-col items-center justify-center p-2 basis-[15%]">
 					<div class="text-xs font-bold">{{ getDayFormat( event.date ) }}</div>
-					<div class="text-2xl font-bold">{{ getHourFormat( event.date ) }}</div>
+					<div class="text-2xl font-bold">{{
+							getHourFormat( event.date )
+						}}
+					</div>
 				</div>
 				<div class="flex-col flex basis-[65%]">
 					<div class="text-lg font-bold">{{ event.title }}</div>

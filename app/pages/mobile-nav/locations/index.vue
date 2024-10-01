@@ -1,11 +1,12 @@
-<script setup lang="ts">
+<script setup
+	lang="ts">
 
 </script>
 
 <template>
-  <div>
-	  locations
-  </div>
+	<div>
+		locations
+	</div>
 </template>
 
 <style scoped>

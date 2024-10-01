@@ -6,9 +6,9 @@ interface Props {
 }
 
 const { label } = defineProps<Props>()
-const model     = defineModel<boolean>({
-	default: false,
-})
+const model     = defineModel<boolean>( {
+	default: false
+} )
 
 </script>
 
