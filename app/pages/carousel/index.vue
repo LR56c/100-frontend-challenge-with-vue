@@ -52,9 +52,6 @@ const setThumbsSwiper = ( swiper: Swiper ) => {
 	thumbsSwiper.value = swiper
 }
 
-function onSelectSwiper() {
-
-}
 </script>
 
 <template>

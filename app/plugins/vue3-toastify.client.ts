@@ -1,11 +1,9 @@
-import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify'
+import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify';
 
-export default defineNuxtPlugin( ( nuxt ) => {
-	if ( process.client ) {
+export default defineNuxtPlugin((nuxt) => {
 		nuxt.vueApp.use( Vue3Toastify,
 			{
-				autoClose: 1000
+				autoClose: 1000,
 				// ...
-			} as ToastContainerOptions )
-	}
-} )
+			} as ToastContainerOptions)
+});
