@@ -37,7 +37,8 @@
 		"@nuxtjs/tailwindcss": "^6.12.1",
 		"@rollup/rollup-linux-x64-gnu": "^4.22.5",
 		"@types/bun": "latest",
-		"@types/tinycolor2": "^1.4.6"
+		"@types/tinycolor2": "^1.4.6",
+		"capture-website": "^4.1.0"
 	},
 	"module": "index.ts",
 	"peerDependencies": {
