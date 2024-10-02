@@ -5,7 +5,7 @@ module.exports = {
   darkMode: ["class"],
   safelist: ["dark"],
   prefix: "",
-  
+
   theme: {
     container: {
       center: true,
@@ -82,5 +82,16 @@ module.exports = {
       },
     },
   },
-  plugins: [animate],
+  plugins: [animate, function ( {addUtilities} ) {
+    const newUtilities = {
+      ".no-scrollbar::-webkit-scrollbar": {
+        display: "none",
+      },
+      ".no-scrollbar": {
+        "-ms-overflow-style": "none",
+        "scrollbar-width": "none",
+      }
+    }
+    addUtilities(newUtilities)
+  }],
 }
