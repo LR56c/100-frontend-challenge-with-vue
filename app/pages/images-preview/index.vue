@@ -56,6 +56,9 @@ for ( let i = 0; i < MAX; i++ ) {
 	} )
 }
 
+const icons = [ 'mdi-view-grid-outline', 'material-symbols-list-rounded',
+	'lucide-gallery-thumbnails' ]
+
 const modeRef = ref( 2 )
 </script>
 
@@ -65,29 +68,27 @@ const modeRef = ref( 2 )
 		<div class="max-w-[560px] w-full rounded-t-2xl shadow-lg bg-zinc-700 text-white flex justify-between py-2 px-4">
 			<div>Images</div>
 			<div class="flex items-center pt-1 gap-1">
-				<button @click="modeRef = 0">
-					<Icon
-						:class="modeRef === 0 ? 'text-white' : 'text-gray-500'"
-						name="mdi-view-grid-outline"/>
-				</button>
-				<Icon class="text-gray-500" name="fluent-divider-short-20-regular"/>
-				<button @click="modeRef = 1">
-					<Icon
-						:class="modeRef === 1 ? 'text-white' : 'text-gray-500'"
-						name="material-symbols-list-rounded"/>
-				</button>
-				<Icon class="text-gray-500" name="fluent-divider-short-20-regular"/>
-				<button @click="modeRef = 2">
-					<Icon
-						:class="modeRef === 2 ? 'text-white' : 'text-gray-500'"
-						name="lucide-gallery-thumbnails"/>
-				</button>
+				<template v-for="(icon, i) in icons">
+					<button
+						class="focus:outline-none"
+						@click="modeRef = i">
+						<Icon
+							:class="modeRef === i ? 'text-white' : 'text-gray-500'"
+							:name="icon"/>
+					</button>
+					<Icon v-if="i !== icons.length - 1"
+						class="text-gray-500"
+						name="fluent-divider-short-20-regular"/>
+				</template>
 			</div>
 		</div>
 		<div class="max-w-[560px] flex flex-wrap max-h-96 bg-zinc-900 h-full w-full rounded-b-2xl shadow-lg">
-			<ImagesPreviewWrapView v-if="modeRef === 0" v-model="imagesRef"></ImagesPreviewWrapView>
-			<ImagesPreviewListView v-else-if="modeRef === 1" v-model="imagesRef"></ImagesPreviewListView>
-			<ImagesPreviewSliderView v-else-if="modeRef === 2" v-model="imagesRef"></ImagesPreviewSliderView>
+			<ImagesPreviewWrapView v-if="modeRef === 0"
+				v-model="imagesRef"></ImagesPreviewWrapView>
+			<ImagesPreviewListView v-else-if="modeRef === 1"
+				v-model="imagesRef"></ImagesPreviewListView>
+			<ImagesPreviewSliderView v-else-if="modeRef === 2"
+				v-model="imagesRef"></ImagesPreviewSliderView>
 		</div>
 	</div>
 </template>
