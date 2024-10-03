@@ -24,6 +24,6 @@ export default defineNuxtConfig( {
 		'nuxt-swiper',
 		'shadcn-nuxt',
 		'nuxt-lucide-icons',
-		'@tresjs/nuxt'
+		'@tresjs/nuxt',
 	]
 } )
