@@ -28,6 +28,8 @@
 		"tailwindcss-animate": "^1.0.7",
 		"tinycolor2": "^1.6.0",
 		"vee-validate": "^4.13.2",
+		"card-validator": "^10.0.0",
+		"@github/relative-time-element": "^4.4.3",
 		"vue": "latest",
 		"vue-router": "latest",
 		"vue-sonner": "^1.2.1",
