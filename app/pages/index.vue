@@ -94,6 +94,10 @@ const list = ref<ChallengeCardProps[]>( [
 		link: '/upload-images',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/upload-images.jpeg?t=1719059648265',
 		day : 19
+	},{
+		link: '/card-wallet',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/card-wallet.jpeg?t=1719059649161',
+		day : 20
 	}
 ] )
 

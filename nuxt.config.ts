@@ -15,6 +15,14 @@ export default defineNuxtConfig( {
 	tres             : {
 		devtools: true
 	},
+	build:{
+		transpile: ['@github/relative-time-element'],
+	},
+	vue:{
+		compilerOptions:{
+			isCustomElement: tag => tag.startsWith('relative-time')
+		}
+	},
 	modules          : [
 		'@nuxt/icon',
 		'@pinia/nuxt',
