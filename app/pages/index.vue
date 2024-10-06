@@ -102,6 +102,10 @@ const list = ref<ChallengeCardProps[]>( [
 		link: '/pricing-plans',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/pricing-plans.jpeg?t=1719059650675',
 		day : 21
+	},{
+		link: '/messages',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/messages.jpeg?t=1719059649971',
+		day : 22
 	}
 ] )
 
