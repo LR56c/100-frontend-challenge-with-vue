@@ -24,7 +24,7 @@ const store = useMessage()
 </script>
 
 <template>
-	<NuxtLink :to="name">
+	<NuxtLink :to="`messages/${name}`">
 	<div class="w-full px-4 py-2 h-16 flex gap-2">
 		<message-avatar :connection-status="connectionStatus" :image></message-avatar>
 		<div class="flex flex-1 justify-center flex-col">

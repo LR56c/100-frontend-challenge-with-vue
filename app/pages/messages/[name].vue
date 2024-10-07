@@ -43,7 +43,7 @@ async function onNewMessage() {
 			class="bg-white rounded-2xl flex flex-col h-96 w-full max-w-sm">
 			<div class="relative p-4 flex flex-col items-center justify-center">
 				<div class="absolute pl-4 left-0 top-1/2 -translate-y-1/2">
-					<NuxtLink to="messages">
+					<NuxtLink to="/messages">
 						<Icon size="20"
 							name="material-symbols-arrow-back"/>
 					</NuxtLink>
