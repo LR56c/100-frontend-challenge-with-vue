@@ -110,6 +110,10 @@ const list = ref<ChallengeCardProps[]>( [
 		link: '/home-page',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/home-page.jpeg?t=1719059649910',
 		day : 23
+	},{
+		link: '/movie-ticket',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/movie-ticket.jpeg?t=1719059649857',
+		day : 24
 	}
 ] )
 
