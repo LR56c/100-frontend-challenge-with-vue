@@ -15,7 +15,7 @@ const onFile = (event : Event) => {
 
 const onDrop = (event: DragEvent) => {
 	isDragging.value = false;
-	if (event.dataTransfer && event.dataTransfer.files.length > 0) {
+	if (event.dataTransfer && event.dataTransfer.files) {
 		const file = event.dataTransfer.files[0];
 	emit( 'onFile', file! )
 	}

@@ -29,7 +29,7 @@ watch( () => route.params.name, ( name ) => {
 
 async function onNewMessage() {
 	const text = newMessageRef.value.trim()
-	if (text.length > 0) {
+	if (text.length) {
 		store.addMessage(name, text, true)
 		newMessageRef.value = ''
 		store.addMessage(name, await store.pickRandomComment(), false)
