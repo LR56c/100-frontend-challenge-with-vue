@@ -1,5 +1,5 @@
 const animate = require( 'tailwindcss-animate' )
-import fluid, { extract } from 'fluid-tailwind'
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -10,6 +10,8 @@ module.exports = {
 		extract
 	},
 	theme   : {
+		screens,
+		fontSize,
 		container: {
 			center : true,
 			padding: '2rem',
