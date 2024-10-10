@@ -16,7 +16,7 @@ export default defineNuxtConfig( {
 		devtools: true
 	},
 	build:{
-		transpile: ['@github/relative-time-element'],
+		transpile: ['@github/relative-time-element', '@vuepic/vue-datepicker'],
 	},
 	vue:{
 		compilerOptions:{
@@ -33,5 +33,6 @@ export default defineNuxtConfig( {
 		'shadcn-nuxt',
 		'nuxt-lucide-icons',
 		'@tresjs/nuxt',
+		'@vee-validate/nuxt'
 	]
 } )
