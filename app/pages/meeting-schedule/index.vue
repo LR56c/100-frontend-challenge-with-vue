@@ -21,8 +21,6 @@ watch( () => dateSelected.value, ( value : DateValue | null) => {
 	const entry = store.getMeetings( dateString )
 	meetings.value = entry
 } )
-
-
 </script>
 
 <template>
