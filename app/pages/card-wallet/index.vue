@@ -66,7 +66,7 @@ export interface CardProps {
 }
 
 const store = useCardWallet()
-console.log( store.cardsRef )
+
 const cardType = cardValidator.creditCardType.types
 
 const cardTypeLogoMap = new Map<string, string>( [
@@ -156,7 +156,7 @@ const gradientMap = new Map<number, Record<string, string>>( [
 			</div>
 			<div class="relative">
 				<div class="absolute -translate-x-1/2 w-24 h-24 bg-black rotate-45 -bottom-6 inset-x-1/2 rounded-3xl"></div>
-				<NuxtLink to="card-wallet/add">
+				<NuxtLink to="/card-wallet/add">
 					<div class="z-20 absolute -translate-x-1/2 -bottom-6 inset-x-1/2 bg-pink-400 rounded-full w-7 h-7 flex items-center justify-center">
 						<Icon size="20"
 							class="text-white"

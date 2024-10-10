@@ -111,10 +111,10 @@ const rgba3    = tinycolor( hexWave3 )
 			<div class="w-full flex my-4 items-center justify-center gap-4">
 				<div v-for="social in socials"
 					:key="social.socialName">
-					<a :href="social.socialNick">
+					<NuxtLink :to="`/${social.socialNick}`">
 						<Icon size="20"
 							:name="social.socialName"/>
-					</a>
+					</NuxtLink>
 				</div>
 			</div>
 			<div class="text-center text-sm">{{ description }}</div>

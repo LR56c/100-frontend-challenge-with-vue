@@ -15,17 +15,12 @@ export default defineNuxtConfig( {
 	tres             : {
 		devtools: true
 	},
-	// routeRules       : {
-	// 	'/messages/**': {
-	// 		prerender: false
-	// 	}
-	// },
-	build            : {
-		transpile: [ '@github/relative-time-element' ]
+	build:{
+		transpile: ['@github/relative-time-element', '@vuepic/vue-datepicker'],
 	},
-	vue              : {
-		compilerOptions: {
-			isCustomElement: tag => tag.startsWith( 'relative-time' )
+	vue:{
+		compilerOptions:{
+			isCustomElement: tag => tag.startsWith('relative-time')
 		}
 	},
 	modules          : [
@@ -37,6 +32,7 @@ export default defineNuxtConfig( {
 		'nuxt-swiper',
 		'shadcn-nuxt',
 		'nuxt-lucide-icons',
-		'@tresjs/nuxt'
+		'@tresjs/nuxt',
+		'@vee-validate/nuxt'
 	]
 } )

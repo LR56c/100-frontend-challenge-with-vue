@@ -2,7 +2,7 @@
 	lang="ts">
 import ChallengeCard, { type ChallengeCardProps } from '~/components/ChallengeCard.vue'
 
-const list = ref<ChallengeCardProps[]>( [
+const list : ChallengeCardProps[] =  [
 	{
 		link: '/profile-card',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/profile-card.jpeg?t=1719059651172',
@@ -114,17 +114,22 @@ const list = ref<ChallengeCardProps[]>( [
 		link: '/movie-ticket',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/movie-ticket.jpeg?t=1719059649857',
 		day : 24
+	},{
+		link: '/meeting-schedule',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/meeting-schedule.jpeg?t=1719059651471',
+		day : 25
 	}
-] )
+].reverse()
 
 </script>
 
 <template>
 	<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
 		<ChallengeCard v-for="(c, i) in list"
+			:key="i"
 			:link="c.link"
 			:img="c.img"
-			:day="i + 1"></ChallengeCard>
+			:day="c.day"></ChallengeCard>
 	</div>
 </template>
 
