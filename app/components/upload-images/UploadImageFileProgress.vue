@@ -142,7 +142,7 @@ const onCancel = () => {
 			</div>
 			<div class="flex w-full justify-between items-center gap-2">
 				<div class="w-full bg-gray-200 rounded-full h-2.5">
-					<div class="bg-indigo-800 h-2.5 rounded-full"
+					<div class="bg-indigo-800 h-2.5 rounded-full transition-all"
 						:style="{
 							width: `${uploadProgress}%`
 						}"></div>

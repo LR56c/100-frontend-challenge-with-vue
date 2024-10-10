@@ -75,7 +75,7 @@ export const useMessage = defineStore( 'message', () => {
 	}
 	const lastMessage8: Message = {
 		id  : ulid(),
-		text: 'Glas to hear this',
+		text: 'Glad to hear this',
 		to  : 'Dusty Touhy',
 		from: user
 	}
