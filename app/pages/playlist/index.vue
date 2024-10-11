@@ -13,7 +13,7 @@ const onClickSong = (value : string) => {
 	if(!store.currentPlaylistSelected) return
   store.getSong(store.currentPlaylistSelected.title,value)
 }
-const modalOpen = ref(false)
+const modalOpen = ref(true)
 </script>
 <template>
 	<div class="bg-gray-100 w-screen h-screen flex items-center justify-center">

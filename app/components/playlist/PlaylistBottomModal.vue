@@ -33,7 +33,7 @@ const store = usePlaylist()
 				</div>
 			</div>
 			<button @click="store.togglePlay">
-				<Icon v-if="store.currentSongState.playing"
+				<Icon v-if="!store.currentSongState.playing"
 					size="40"
 					class="text-indigo-500"
 					name="material-symbols-play-arrow-rounded"/>
@@ -81,7 +81,7 @@ const store = usePlaylist()
 						name="material-symbols-fast-forward-rounded"/>
 				</button>
 				<button @click="store.togglePlay">
-					<Icon v-if="store.currentSongState.playing"
+					<Icon v-if="!store.currentSongState.playing"
 						size="40"
 						class="text-indigo-500"
 						name="material-symbols-play-arrow-rounded"/>
