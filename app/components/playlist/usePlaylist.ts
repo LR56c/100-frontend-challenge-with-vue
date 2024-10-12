@@ -22,11 +22,12 @@ type PlaylistSongState = {
 	playing: boolean
 	currentDuration: number
 	song: PlaylistSong
-	songIndex : number
+	songIndex: number
 }
 export const usePlaylist = defineStore( 'playlist', () => {
 
-	const currentSongState = ref<PlaylistSongState | undefined>( undefined )
+	const currentSongState        = ref<PlaylistSongState | undefined>(
+		undefined )
 	const currentPlaylistSelected = ref<Playlist | undefined>( undefined )
 
 	// title , playlist
@@ -43,14 +44,14 @@ export const usePlaylist = defineStore( 'playlist', () => {
 					title   : 'Serenity Dreams',
 					artist  : 'Luna Bliss',
 					cover   : '/land1.jpg',
-					duration: 300-48
+					duration: 300 - 48
 				},
 				{
 					id      : ulid(),
 					title   : 'Tranquil Echoes',
 					artist  : 'Zenith Harmonies',
 					cover   : '/land2.jpg',
-					duration: 300-21
+					duration: 300 - 21
 				},
 				{
 					id      : ulid(),
@@ -64,21 +65,21 @@ export const usePlaylist = defineStore( 'playlist', () => {
 					title   : 'Mystic Oasis',
 					artist  : 'Solstice Serenity',
 					cover   : '/land4.jpg',
-					duration: 300-121
+					duration: 300 - 121
 				},
 				{
 					id      : ulid(),
 					title   : 'Calm Horizons',
 					artist  : 'Echo Falls',
 					cover   : '/land5.jpg',
-					duration: 300-71
+					duration: 300 - 71
 				},
 				{
 					id      : ulid(),
 					title   : 'Azure Reverie',
 					artist  : 'Celeste Har',
 					cover   : '/land6.jpg',
-					duration: 300-110
+					duration: 300 - 110
 				},
 				{
 					id      : ulid(),
@@ -91,9 +92,12 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		} ]
 	] )
 
-	let lastUpdate                               = 0
-	let startTime                                = 0
-	let songCompleted 													= false
+	let lastUpdate = 0
+
+	let startTime = 0
+
+	let songCompleted = false
+
 	const { pause: pauseRaf, resume: resumeRaf } = useRafFn( () => {
 		if ( currentSongState.value ) {
 			const elapsedTime                      = performance.now() - startTime
@@ -103,13 +107,13 @@ export const usePlaylist = defineStore( 'playlist', () => {
 			if ( currentSongState.value.currentDuration >=
 				currentSongState.value.song.duration )
 			{
-				currentSongState.value.playing         = false
-				songCompleted = true
+				currentSongState.value.playing = false
+				songCompleted                  = true
 				pauseRaf()
 			}
 		}
 	} )
-	const _toggleRafCounter                       = () => {
+	const _toggleRafCounter                      = () => {
 		if ( !currentSongState.value ) {
 			return
 		}
@@ -123,7 +127,7 @@ export const usePlaylist = defineStore( 'playlist', () => {
 			resumeRaf()
 		}
 	}
-	const _resetCounter = () => {
+	const _resetCounter                          = () => {
 		if ( !currentSongState.value ) {
 			return
 		}
@@ -133,8 +137,8 @@ export const usePlaylist = defineStore( 'playlist', () => {
 
 		pauseRaf()
 	}
-	const togglePlay            = () => {
-		if(songCompleted) {
+	const togglePlay                             = () => {
+		if ( songCompleted ) {
 			songCompleted = false
 			_resetCounter()
 		}
@@ -145,7 +149,7 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		currentSongState.value.playing = !currentSongState.value.playing
 		_toggleRafCounter()
 	}
-	const getPercentageDuration = computed( () => {
+	const getPercentageDuration                  = computed( () => {
 		if ( !currentSongState.value ) {
 			return 0
 		}
@@ -159,8 +163,8 @@ export const usePlaylist = defineStore( 'playlist', () => {
 
 	// esta vinculado a la playlist actual. para hacerlo realista, deberia haber una
 	// song list y la playlist deberia tener los ids de las canciones y array de canciones aparte
-	const getSong = ( title: string, songId: string ) => {
-		const playlist = _getPlaylist( title )
+	const getSong          = ( title: string, songId: string ) => {
+		const playlist  = _getPlaylist( title )
 		const songIndex = playlist?.songs.findIndex( song => song.id === songId )
 
 		if ( songIndex === undefined ) {
@@ -172,12 +176,12 @@ export const usePlaylist = defineStore( 'playlist', () => {
 			playing        : false,
 			currentDuration: 0,
 			song           : song,
-			songIndex			: songIndex
+			songIndex      : songIndex
 		}
 		_resetCounter()
 		_toggleRafCounter()
 	}
-	const playNextSong = () => {
+	const playNextSong     = () => {
 		if ( !currentPlaylistSelected.value ) {
 			return
 		}
@@ -185,12 +189,12 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		if ( nextSongIndex >= currentPlaylistSelected.value.songs.length ) {
 			return
 		}
-		const nextSong = currentPlaylistSelected.value.songs[nextSongIndex]!
+		const nextSong         = currentPlaylistSelected.value.songs[nextSongIndex]!
 		currentSongState.value = {
 			playing        : true,
 			currentDuration: 0,
 			song           : nextSong,
-			songIndex			: nextSongIndex
+			songIndex      : nextSongIndex
 		}
 		_resetCounter()
 	}
@@ -202,27 +206,27 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		if ( previousSongIndex < 0 ) {
 			return
 		}
-		const previousSong = currentPlaylistSelected.value.songs[previousSongIndex]!
+		const previousSong     = currentPlaylistSelected.value.songs[previousSongIndex]!
 		currentSongState.value = {
 			playing        : true,
 			currentDuration: 0,
 			song           : previousSong,
-			songIndex			: previousSongIndex
+			songIndex      : previousSongIndex
 		}
 		_resetCounter()
 	}
 	onMounted( () => {
 		const playlist = _getPlaylist( 'Chill Vibes 2024' )
-		const song     = playlist?.songs.at(-1)
+		const song     = playlist?.songs.at( -1 )
 		if ( !song || !playlist ) {
 			return
 		}
 		currentPlaylistSelected.value = playlist
-		currentSongState.value = {
+		currentSongState.value        = {
 			playing        : false,
 			currentDuration: 0,
 			song           : song,
-			songIndex			: playlist!.songs.length - 1
+			songIndex      : playlist!.songs.length - 1
 		}
 		togglePlay()
 	} )
@@ -232,21 +236,22 @@ export const usePlaylist = defineStore( 'playlist', () => {
 			return '00:00'
 		}
 		return formatSongDuration( currentSongState.value.currentDuration )
-	})
+	} )
 
 	const nextSongExist = computed( () => {
 		if ( !currentPlaylistSelected.value ) {
 			return false
 		}
-		return currentSongState.value!.songIndex + 1 < currentPlaylistSelected.value.songs.length
-	})
+		return currentSongState.value!.songIndex + 1 <
+			currentPlaylistSelected.value.songs.length
+	} )
 
 	const prevSongExist = computed( () => {
 		if ( !currentPlaylistSelected.value ) {
 			return false
 		}
 		return currentSongState.value!.songIndex - 1 >= 0
-	})
+	} )
 
 	return {
 		currentSongState,
@@ -258,6 +263,6 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		getSong,
 		togglePlay,
 		playNextSong,
-		playPreviousSong,
+		playPreviousSong
 	}
 } )

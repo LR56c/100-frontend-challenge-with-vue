@@ -18,7 +18,7 @@ const model = defineModel<number>( {
 			<input type="range"
 				id="price-range"
 				disabled
-				class="w-full"
+				class="flex flex-1"
 				:min="minValue"
 				:max="maxValue"
 				v-model.number="model"/>
