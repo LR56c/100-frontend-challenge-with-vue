@@ -2,7 +2,7 @@
 	lang="ts">
 import ChallengeCard, { type ChallengeCardProps } from '~/components/ChallengeCard.vue'
 
-const list : ChallengeCardProps[] =  [
+const list: ChallengeCardProps[] = [
 	{
 		link: '/profile-card',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/profile-card.jpeg?t=1719059651172',
@@ -90,50 +90,54 @@ const list : ChallengeCardProps[] =  [
 		link: '/images-preview',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/images-preview.jpeg?t=1719059651242',
 		day : 18
-	},{
+	}, {
 		link: '/upload-images',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/upload-images.jpeg?t=1719059648265',
 		day : 19
-	},{
+	}, {
 		link: '/card-wallet',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/card-wallet.jpeg?t=1719059649161',
 		day : 20
-	},{
+	}, {
 		link: '/pricing-plans',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/pricing-plans.jpeg?t=1719059650675',
 		day : 21
-	},{
+	}, {
 		link: '/messages',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/messages.jpeg?t=1719059649971',
 		day : 22
-	},{
+	}, {
 		link: '/home-page',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/home-page.jpeg?t=1719059649910',
 		day : 23
-	},{
+	}, {
 		link: '/movie-ticket',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/movie-ticket.jpeg?t=1719059649857',
 		day : 24
-	},{
+	}, {
 		link: '/meeting-schedule',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/meeting-schedule.jpeg?t=1719059651471',
 		day : 25
-	},{
+	}, {
 		link: '/job-board',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/job-board.jpeg?t=1719059651338',
 		day : 26
-	},{
+	}, {
 		link: '/leaderboards',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/leaderboards.jpeg?t=1719059649237',
 		day : 27
-	},{
+	}, {
 		link: '/playlist',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/playlist.jpeg?t=1719059649135',
 		day : 28
-	}	,{
+	}, {
 		link: '/video-player',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/video-player.jpeg?t=1719059651758',
 		day : 29
+	}, {
+		link: '/invoices',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/invoices.jpeg?t=1719059650508',
+		day : 30
 	}
 ].reverse()
 
@@ -141,7 +145,8 @@ const list : ChallengeCardProps[] =  [
 
 <template>
 	<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
-		<ChallengeCard v-for="(c, i) in list"k
+		<ChallengeCard v-for="(c, i) in list"
+			k
 			:key="i"
 			:link="c.link"
 			:img="c.img"
