@@ -57,11 +57,10 @@ export const useDashboardReports = defineStore( 'dashboard-reports', () => {
 
 		const previousCount = previousPeriodReports.length
 		const currentCount = currentPeriodReports.length
-		if (previousCount === 0) {
+		if (currentCount === 0 || previousCount === 0) {
 			return undefined
 		}
 		const change = ((currentCount - previousCount) / previousCount) * 100
-		// to fixed 0 decimal
 		return {
 			currentValue : currentCount,
 			percentage : parseInt((Math.round(change * 100) / 100).toFixed(0))
