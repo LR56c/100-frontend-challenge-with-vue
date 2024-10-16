@@ -104,6 +104,9 @@ importers:
       vue:
         specifier: latest
         version: 3.5.11(typescript@5.6.3)
+      vue-color-input:
+        specifier: ^2.0.0
+        version: 2.0.0(vue@3.5.11(typescript@5.6.3))
       vue-router:
         specifier: latest
         version: 4.4.5(vue@3.5.11(typescript@5.6.3))
@@ -5493,6 +5496,11 @@ packages:
 
   vue-bundle-renderer@2.1.1:
     resolution: {integrity: sha512-+qALLI5cQncuetYOXp4yScwYvqh8c6SMXee3B+M7oTZxOgtESP0l4j/fXdEJoZ+EdMxkGWIj+aSEyjXkOdmd7g==}
+
+  vue-color-input@2.0.0:
+    resolution: {integrity: sha512-DUSLNNlBWm2eotfW8k7Ss6iphy51xv+MPOnoWQ81HkAiTu2p82KMVstdG9NIkEkbcmNs89vpHcNF5YOyXTT3uQ==}
+    peerDependencies:
+      vue: ^3.0.5
 
   vue-demi@0.14.10:
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
@@ -12643,6 +12651,11 @@ snapshots:
   vue-bundle-renderer@2.1.1:
     dependencies:
       ufo: 1.5.4
+
+  vue-color-input@2.0.0(vue@3.5.11(typescript@5.6.3)):
+    dependencies:
+      tinycolor2: 1.6.0
+      vue: 3.5.11(typescript@5.6.3)
 
   vue-demi@0.14.10(vue@3.5.11(typescript@5.6.3)):
     dependencies:
