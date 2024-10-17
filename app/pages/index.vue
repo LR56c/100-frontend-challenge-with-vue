@@ -151,6 +151,16 @@ const list: ChallengeCardProps[] = [
 		link: '/brand-visualizer',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/brand-visualizer.jpeg?t=1719059648487',
 		day : 33
+	},
+	{
+		link: '/user-profile',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/user-profile.jpeg?t=1719059650537',
+		day : 34
+	},
+	{
+		link: '/rate-us',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/rate-us.jpeg?t=1719059648212',
+		day : 35
 	}
 ].reverse()
 
