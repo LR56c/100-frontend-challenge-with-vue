@@ -39,13 +39,20 @@ const props           = defineProps<MyComboBoxProps>()
 const emit            = defineEmits<{
 	select: [ string ]
 }>()
-const value           = ref( '' )
+const value           = defineModel( {
+	default: ''
+} )
 const placeholerLower = props.placeholder.toLowerCase()
 const open            = ref( false )
 
 const onSelect = ( event ?: any ) => {
 	emit( 'select', value.value )
 }
+
+const text = computed( () => {
+	return 	value.value.length ? props.values.find( ( v ) => v.value === value.value )?.value
+		: props.placeholder
+})
 </script>
 
 <template>
@@ -54,19 +61,15 @@ const onSelect = ( event ?: any ) => {
 			<button
 				role="combobox"
 				:aria-expanded="open"
-				:class="cn('min-w-32 items-center flex gap-1 capitalize', props.class)"
+				:class="cn('min-w-32 w-full h-10 items-center flex gap-1 capitalize', props.class)"
 			>
 				<Icon v-if="icon"
 					:name="icon"
 					class="basis-[15%] text-gray-400"/>
 				<span
-					:class="[value.length > 10 ? 'text-xs' : 'text-sm']"
-					class="flex flex-1 items-center h-5 text-gray-400 line-clamp-1">
-					{{
-						value
-							? values.find( ( v ) => v.value === value )?.value
-							: placeholder
-					}}
+					:class="[value.length > 10 ? 'text-xs' : 'text-sm', value ? 'text-black' : 'text-gray-400']"
+					class="flex flex-1 items-center h-5 line-clamp-1">
+					{{ text}}
 				</span>
 				<ChevronsUpDown class="basis-[10%] ml-2 h-4 w-4 shrink-0 opacity-50"/>
 			</button>

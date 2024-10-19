@@ -93,12 +93,12 @@ const sleepBlockColorSelector = ( type: SoundType ) => {
 				</div>
 				<div class="flex gap-4">
 					<sleep-data-status
-						:key="sleepData.sleepQuality.value"
-						:value="sleepData.sleepQuality"
-					></sleep-data-status>
-					<sleep-data-status
 						:key="sleepData.sleepTime.value"
 						:value="sleepData.sleepTime"
+					></sleep-data-status>
+					<sleep-data-status
+						:key="sleepData.sleepQuality.value"
+						:value="sleepData.sleepQuality"
 					></sleep-data-status>
 				</div>
 				<div class="flex h-full w-full gap-0.5">
