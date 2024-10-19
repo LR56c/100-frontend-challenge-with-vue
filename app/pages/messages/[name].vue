@@ -1,13 +1,13 @@
 <script setup
 	lang="ts">
-import {parseUlid} from '~/lib/parseUlid'
-import {formatDate} from '~/lib/format-message-date'
 import MessageAvatar from '~/components/messages/MessageAvatar.vue'
 import MessageBubble from '~/components/messages/MessageBubble.vue'
 import {
 	type Chat,
 	useMessage
 } from '~/components/messages/useMessage'
+import { formatDate } from '~/lib/format-message-date'
+import { parseUlid } from '~/lib/parseUlid'
 
 const router = useRouter()
 const route  = useRoute()

@@ -1,22 +1,46 @@
 <script setup
 	lang="ts">
 import {
-	type DateValue,
-	getLocalTimeZone,
-	today
-} from '@internationalized/date'
-import { type HTMLAttributes, type Ref, computed } from 'vue'
-import { CalendarRoot, type CalendarRootEmits, type CalendarRootProps, useDateFormatter, useForwardPropsEmits } from 'radix-vue'
-import { createDecade, createYear, toDate } from 'radix-vue/date'
-import { useVModel } from '@vueuse/core'
-import { CalendarCell, CalendarCellTrigger, CalendarGrid, CalendarGridBody, CalendarGridHead, CalendarGridRow, CalendarHeadCell, CalendarHeader, CalendarHeading } from '@/components/ui/calendar'
+	CalendarCell,
+	CalendarCellTrigger,
+	CalendarGrid,
+	CalendarGridBody,
+	CalendarGridHead,
+	CalendarGridRow,
+	CalendarHeadCell,
+	CalendarHeader,
+	CalendarHeading
+} from '@/components/ui/calendar'
 import {
 	Select,
 	SelectContent,
 	SelectItem,
 	SelectTrigger,
-	SelectValue,
+	SelectValue
 } from '@/components/ui/select'
+import {
+	type DateValue,
+	getLocalTimeZone,
+	today
+} from '@internationalized/date'
+import { useVModel } from '@vueuse/core'
+import {
+	CalendarRoot,
+	type CalendarRootEmits,
+	type CalendarRootProps,
+	useDateFormatter,
+	useForwardPropsEmits
+} from 'radix-vue'
+import {
+	createDecade,
+	createYear,
+	toDate
+} from 'radix-vue/date'
+import {
+	computed,
+	type HTMLAttributes,
+	type Ref
+} from 'vue'
 import { cn } from '~/lib/utils'
 
 const props = withDefaults(defineProps<CalendarRootProps & { class?: HTMLAttributes['class'] }>(), {

@@ -2,7 +2,6 @@
 	lang="ts">
 import type Swiper from 'swiper'
 import { ref } from 'vue'
-import { SelectItem } from '~/components/ui/select'
 
 interface Props {
 	name: string

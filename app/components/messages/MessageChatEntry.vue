@@ -1,11 +1,12 @@
 <script setup
 	lang="ts">
-import {parseUlid} from '~/lib/parseUlid'
 import MessageAvatar from '~/components/messages/MessageAvatar.vue'
 import {
 	type Message,
 	useMessage
 } from '~/components/messages/useMessage'
+import { parseUlid } from '~/lib/parseUlid'
+
 const format = (date : Date)=> {
 	const isOtherDay = date.getDay() !== new Date().getDay()
 	const form =  isOtherDay ? 'd MMM ' : 'HH:mm'

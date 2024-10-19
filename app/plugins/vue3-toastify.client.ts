@@ -1,4 +1,4 @@
-import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify';
+import Vue3Toastify, { type ToastContainerOptions } from 'vue3-toastify'
 
 export default defineNuxtPlugin((nuxt) => {
 		nuxt.vueApp.use( Vue3Toastify,

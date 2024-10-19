@@ -1,12 +1,12 @@
 <script setup
 	lang="ts">
 import PlaylistBottomModal from '~/components/playlist/PlaylistBottomModal.vue'
+import PlaylistLikeButton from '~/components/playlist/PlaylistLikeButton.vue'
+import { usePlaylist } from '~/components/playlist/usePlaylist'
 import {
 	formatLikes,
 	formatPlaylistDuration
 } from '~/lib/formatSongDuration'
-import PlaylistLikeButton from '~/components/playlist/PlaylistLikeButton.vue'
-import { usePlaylist } from '~/components/playlist/usePlaylist'
 
 const store = usePlaylist()
 const onClickSong = (value : string) => {

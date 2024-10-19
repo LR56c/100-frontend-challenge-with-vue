@@ -6,7 +6,6 @@ import {
 	getLocalTimeZone,
 	today
 } from '@internationalized/date'
-import { useVModel } from '@vueuse/core'
 import { Calendar as CalendarIcon } from 'lucide-vue-next'
 import {
 	CalendarRoot,
@@ -17,7 +16,6 @@ import {
 import {
 	computed,
 	type HTMLAttributes,
-	type Ref,
 	ref
 } from 'vue'
 import {

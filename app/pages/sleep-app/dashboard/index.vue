@@ -4,10 +4,7 @@
 import SleepDataCircleProgress
 	from '~/components/sleep-app/SleepDataCircleProgress.vue'
 import SleepDataStatus from '~/components/sleep-app/SleepDataStatus.vue'
-import {
-	type SoundType,
-	useAudioDecibels
-} from '~/components/sleep-app/useAudioDecibels'
+import { type SoundType } from '~/components/sleep-app/useAudioDecibels'
 import {
 	formatSeconds,
 	useSleepApp
