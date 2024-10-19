@@ -166,6 +166,11 @@ const list: ChallengeCardProps[] = [
 		link: '/sleep-app',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/sleep-app.jpeg?t=1719059650896',
 		day : 36
+	},
+	{
+		link: '/explore-flights',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/explore-flights.jpeg?t=1719059650668',
+		day : 37
 	}
 ].reverse()
 
