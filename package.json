@@ -33,6 +33,7 @@
 		"nuxt-lucide-icons": "^1.0.5",
 		"nuxt-swiper": "^1.2.2",
 		"pinia": "^2.2.4",
+		"qrcode.vue": "^3.5.1",
 		"radix-vue": "^1.9.7",
 		"shadcn-nuxt": "^0.10.4",
 		"shadcn-vue": "^0.10.5",

@@ -77,6 +77,9 @@ importers:
       pinia:
         specifier: ^2.2.4
         version: 2.2.4(typescript@5.6.3)(vue@3.5.11(typescript@5.6.3))
+      qrcode.vue:
+        specifier: ^3.5.1
+        version: 3.5.1(vue@3.5.11(typescript@5.6.3))
       radix-vue:
         specifier: ^1.9.7
         version: 1.9.7(vue@3.5.11(typescript@5.6.3))
@@ -4628,6 +4631,11 @@ packages:
     engines: {node: '>=16.13.2'}
     deprecated: < 22.8.2 is no longer supported
     hasBin: true
+
+  qrcode.vue@3.5.1:
+    resolution: {integrity: sha512-Mek5hpUgYP2KsRW4mnyPMUttknuXSe37UorUzymYi3rr/74rV0aTvejl2gF2phrxwAEm6zhpSvkGzIxftxj5Tg==}
+    peerDependencies:
+      vue: ^3.0.0
 
   querystringify@2.2.0:
     resolution: {integrity: sha512-FIqgj2EUvTa7R50u0rGsyTftzjYmv/a3hO345bZNrqabNqjtgiDMgmo4mkUjd+nzU5oF3dClKqFIPUKybUyqoQ==}
@@ -11787,6 +11795,10 @@ snapshots:
       - supports-color
       - typescript
       - utf-8-validate
+
+  qrcode.vue@3.5.1(vue@3.5.11(typescript@5.6.3)):
+    dependencies:
+      vue: 3.5.11(typescript@5.6.3)
 
   querystringify@2.2.0: {}
 
