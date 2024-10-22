@@ -181,6 +181,11 @@ const list: ChallengeCardProps[] = [
 		link: '/qr-code-scanner',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/qr-code-scanner.jpeg?t=1719059650894',
 		day : 39
+	},
+	{
+		link: '/faq',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/faq.jpeg?t=1719059649639',
+		day : 40
 	}
 ].reverse()
 
