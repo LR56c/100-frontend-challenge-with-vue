@@ -196,6 +196,15 @@ const list: ChallengeCardProps[] = [
 		link: '/settings-appearance',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/settings-appearance.jpeg?t=1719059649586',
 		day : 42
+	},
+	{
+		link: '/player-profile',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/player-profile.jpeg?t=1719059651766',
+		day : 43
+	},
+	{
+		link: '/website-launch', img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/website-launch.jpeg?t=1719059652012',
+		day : 44
 	}
 ].reverse()
 
