@@ -18,10 +18,11 @@ const togglePassword = () => {
 
 <template>
 	<div class="relative px-4 py-2 bg-blue-50 rounded-2xl flex items-center focus-within:outline focus-within:outline-2 focus-within:outline-blue-600">
-		<input v-model="value"
-			ref="input"
-			:type="typeRef"
+		<input
 			id="floating_filled"
+			ref="input"
+			v-model="value"
+			:type="typeRef"
 			class="w-full pt-5 font-bold text-sm text-gray-900 bg-blue-50 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
 			placeholder=""/>
 		<label for="floating_filled"
