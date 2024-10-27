@@ -26,7 +26,6 @@ const firstTime = ref(false)
 			v-model="value"
 			@click="firstTime = true"
 		/>
-<!--		<span class="w-full text-gray-400 text-sm text-center" v-show="value === 0">{{ placeholder }}</span>-->
 		<span v-if="suffix && firstTime" class="text-gray-400 text-sm">{{ suffix }}</span>
 		<input type="range" :min :max v-model="value" class="PB-range-slider"
 			@click="firstTime = true"

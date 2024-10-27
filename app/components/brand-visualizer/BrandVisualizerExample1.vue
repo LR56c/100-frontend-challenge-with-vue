@@ -22,21 +22,21 @@ const props = defineProps<BrandVisualizerExample1Props>()
 			<hr/>
 			<div class="m-2 w-8 h-2 rounded-2xl bg-black"></div>
 			<input disabled
-				class="rounded-2xl border h-4 w-32 mx-2"/>
+				class="border-sync rounded-2xl border h-4 w-32 mx-2"/>
 		</div>
 	</div>
 	<hr/>
 	<div class="py-2 px-4">
-		<button class="w-full bg-indigo-700 py-4 rounded-2xl"></button>
+		<button class="button-sync w-full bg-indigo-700 py-4 rounded-2xl"></button>
 	</div>
 </div>
 </template>
 
 <style scoped>
-input {
+.border-sync {
 	border-color: v-bind(color);
 }
-button {
+.button-sync {
 	background-color: v-bind(color);
 }
 </style>

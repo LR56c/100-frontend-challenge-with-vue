@@ -227,8 +227,7 @@ export const useSleepApp = defineStore( 'sleep-app', () => {
 			sleepType        : 'low',
 			durationInSeconds: totalTimeSleepBlock
 		} ]
-		const sleepIntervals: SleepInterval[]       = sleepData.sleepIntervals.length >
-		0 ? sleepData.sleepIntervals : defaultSleepInterval
+		const sleepIntervals: SleepInterval[]       = sleepData.sleepIntervals.length ? sleepData.sleepIntervals : defaultSleepInterval
 
 		const totalTimeInSeconds                      = sleepIntervals.reduce(
 			( acc, interval ) => acc + interval.durationInSeconds, 0 )

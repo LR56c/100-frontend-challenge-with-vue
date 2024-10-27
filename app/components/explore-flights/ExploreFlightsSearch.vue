@@ -56,7 +56,7 @@ const onSearch         = () => {
 	const date: Date | undefined = valueDate.value ? toDate( valueDate.value ) : new Date()
 	const response               = store.filterFlight( fromPlace.value,
 		toPlace.value, date )
-	if ( response.length > 0 ) {
+	if ( response.length ) {
 		results.value = [ response[0] ]
 	}
 }
