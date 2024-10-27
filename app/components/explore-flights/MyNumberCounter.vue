@@ -15,21 +15,25 @@ const {
 	      min = 0,
 	      max = Infinity,
 	      ...props
-      }          = defineProps<MyNumberCounterProps>()
-const value      = defineModel( {
+      }     = defineProps<MyNumberCounterProps>()
+const value = defineModel( {
 	default: 0
 } )
 
 const reachedMax = computed( () => value.value >= max )
 const reachedMin = computed( () => value.value <= min )
 
-const increment  = () => {
-	if ( reachedMax.value ) return
-		value.value++
+const increment = () => {
+	if ( reachedMax.value ) {
+		return
+	}
+	value.value++
 }
-const decrement  = () => {
-	if ( reachedMin.value ) return
-		value.value--
+const decrement = () => {
+	if ( reachedMin.value ) {
+		return
+	}
+	value.value--
 }
 </script>
 
@@ -41,9 +45,9 @@ const decrement  = () => {
 			@click="decrement"/>
 		<div class="w-full h-9 flex items-center">
 			<input
-				type="text"
-				v-model="value"
 				v-show="value !== 0"
+				v-model="value"
+				type="text"
 				:class="['w-full inline-flex border-input bg-background text-sm text-center ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50', suffix ? 'basis-1/2' : '']"
 			/>
 			<span

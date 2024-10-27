@@ -41,13 +41,15 @@ for ( const color of props.colors ) {
 </script>
 
 <template>
-	<RadioGroup v-model="colorSelected"
+	<RadioGroup
+		v-model="colorSelected"
 		:class="cn(props.class)"
 		class="flex w-full items-center justify-center"
 		orientation="horizontal">
-		<RadioGroupItem v-for="color in colorClass"
-			:key="color"
+		<RadioGroupItem
+			v-for="color in colorClass"
 			:id="color"
+			:key="color"
 			:value="color"
 			:class="[color]"
 			class="text-white dark:text-black border-0 data-[state=checked]:outline data-[state=checked]:outline-1 data-[state=checked]:outline-gray-500 outline-none focus:outline-none"/>

@@ -47,7 +47,10 @@ const tabSelected = ref('appearance')
 					</TabsTrigger>
 				</TabsList>
 				<TabsContent v-for="tab in tabs" :key="tab.name" :value="tab.name">
-					<component v-if="tab.component" :is="tab.component"/>
+					<component
+						:is="tab.component"
+						v-if="tab.component"
+					/>
 				</TabsContent>
 			</Tabs>
 			<hr class="border border-black dark:border-white"/>
