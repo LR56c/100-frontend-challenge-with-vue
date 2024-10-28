@@ -203,12 +203,19 @@ const list: ChallengeCardProps[] = [
 		day : 43
 	},
 	{
-		link: '/website-launch', img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/website-launch.jpeg?t=1719059652012',
+		link: '/website-launch',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/website-launch.jpeg?t=1719059652012',
 		day : 44
 	},
 	{
-		link: '/hosting-features', img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/hosting-features.jpeg?t=1719059651140',
+		link: '/hosting-features',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/hosting-features.jpeg?t=1719059651140',
 		day : 45
+	},
+	{
+		link: '/customer-list',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/customer-list.jpeg?t=1719059650149',
+		day : 46
 	}
 ].reverse()
 
