@@ -56,8 +56,7 @@ watch( () => customer.value, ( newValue ) => {
 } )
 
 const onSubmit = form.handleSubmit( ( values ) => {
-	console.log( 'Form submitted!', customer, values )
-	toast( 'You submitted the following values' )
+	toast( `Customer '${values.name}' updated` )
 	const modifiedCustomer: Customer = {
 		...customer.value!,
 		...values
@@ -123,7 +122,7 @@ const onSubmit = form.handleSubmit( ( values ) => {
 					</FormItem>
 				</FormField>
 				<DialogFooter>
-					<Button type="submit">
+					<Button variant="outline" type="submit">
 						Save changes
 					</Button>
 				</DialogFooter>
