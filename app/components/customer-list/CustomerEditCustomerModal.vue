@@ -84,13 +84,14 @@ const onSubmit = form.handleSubmit( ( values ) => {
 				<DialogTitle>Edit customer</DialogTitle>
 			</DialogHeader>
 			<form v-if="customer"
+				class="flex flex-col gap-4"
 				@submit.prevent="onSubmit">
 				<FormField v-slot="{ componentField }"
 					name="name">
 					<FormItem>
 						<FormLabel>Name</FormLabel>
 						<FormControl>
-							<Input type="text"
+							<Input class="rounded" type="text"
 								:default-value="customer.name"
 								v-bind="componentField"/>
 						</FormControl>
@@ -102,7 +103,7 @@ const onSubmit = form.handleSubmit( ( values ) => {
 					<FormItem>
 						<FormLabel>Company</FormLabel>
 						<FormControl>
-							<Input type="text"
+							<Input class="rounded" type="text"
 								:default-value="customer.company"
 								v-bind="componentField"/>
 						</FormControl>
@@ -114,7 +115,7 @@ const onSubmit = form.handleSubmit( ( values ) => {
 					<FormItem>
 						<FormLabel>Phone</FormLabel>
 						<FormControl>
-							<Input type="text"
+							<Input class="rounded" type="text"
 								:default-value="customer.phone"
 								v-bind="componentField"/>
 						</FormControl>
@@ -122,7 +123,7 @@ const onSubmit = form.handleSubmit( ( values ) => {
 					</FormItem>
 				</FormField>
 				<DialogFooter>
-					<Button variant="outline" type="submit">
+					<Button class="rounded" variant="outline" type="submit">
 						Save changes
 					</Button>
 				</DialogFooter>
