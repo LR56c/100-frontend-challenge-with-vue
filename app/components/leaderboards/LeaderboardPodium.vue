@@ -1,6 +1,5 @@
 <script setup
 	lang="ts">
-import type { HTMLAttributes } from 'vue'
 import LeaderboardScoreStatus
 	from '~/components/leaderboards/LeaderboardScoreStatus.vue'
 import type { RateStatus } from '~/components/leaderboards/useLeaderboards'

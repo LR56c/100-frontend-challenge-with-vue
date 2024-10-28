@@ -1,27 +1,15 @@
 <script setup
 	lang="ts">
-import {
-	Table,
-	TableBody,
-	TableCaption,
-	TableCell,
-	TableHead,
-	TableHeader,
-	TableRow,
-} from '@/components/ui/table'
 import LeaderboardPodium from '~/components/leaderboards/LeaderboardPodium.vue'
 import LeaderboardPodiumEmpty
 	from '~/components/leaderboards/LeaderboardPodiumEmpty.vue'
 import LeaderboardRateRow
 	from '~/components/leaderboards/LeaderboardRateRow.vue'
-import LeaderboardScoreStatus
-	from '~/components/leaderboards/LeaderboardScoreStatus.vue'
 import {
 	rates,
 	type RateType,
 	useLeaderboards
 } from '~/components/leaderboards/useLeaderboards'
-import { cn } from '~/lib/utils'
 
 const rateSelected = ref<RateType>( 'month' )
 

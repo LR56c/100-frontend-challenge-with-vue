@@ -1,9 +1,8 @@
 <script setup
 	lang="ts">
 
-import LeaderboardScoreStatus
-	from '~/components/leaderboards/LeaderboardScoreStatus.vue'
 import { cn } from '~/lib/utils'
+
 interface LeaderboardPodiumEmptyProps {
 	top: number
 	boxClass ?: string

@@ -146,8 +146,8 @@ export const usePlaylist = defineStore( 'playlist', () => {
 		if ( !currentSongState.value ) {
 			return
 		}
-		currentSongState.value.playing = !currentSongState.value.playing
 		_toggleRafCounter()
+		currentSongState.value.playing = !currentSongState.value.playing
 	}
 	const getPercentageDuration                  = computed( () => {
 		if ( !currentSongState.value ) {
@@ -228,7 +228,8 @@ export const usePlaylist = defineStore( 'playlist', () => {
 			song           : song,
 			songIndex      : playlist!.songs.length - 1
 		}
-		togglePlay()
+		_toggleRafCounter()
+		_resetCounter()
 	} )
 
 	const getDurationCurrentSongFormat = computed( () => {

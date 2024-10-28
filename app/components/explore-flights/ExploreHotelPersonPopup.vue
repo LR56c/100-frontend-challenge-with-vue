@@ -9,6 +9,7 @@ import {
 	PopoverTrigger
 } from '~/components/ui/popover'
 import { cn } from '~/lib/utils'
+
 interface ExploreHotelPersonPopupProps {
 	class?: HTMLAttributes['class']
 }

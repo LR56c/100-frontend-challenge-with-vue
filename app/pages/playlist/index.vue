@@ -1,19 +1,19 @@
 <script setup
 	lang="ts">
 import PlaylistBottomModal from '~/components/playlist/PlaylistBottomModal.vue'
+import PlaylistLikeButton from '~/components/playlist/PlaylistLikeButton.vue'
+import { usePlaylist } from '~/components/playlist/usePlaylist'
 import {
 	formatLikes,
 	formatPlaylistDuration
 } from '~/lib/formatSongDuration'
-import PlaylistLikeButton from '~/components/playlist/PlaylistLikeButton.vue'
-import { usePlaylist } from '~/components/playlist/usePlaylist'
 
 const store = usePlaylist()
 const onClickSong = (value : string) => {
 	if(!store.currentPlaylistSelected) return
   store.getSong(store.currentPlaylistSelected.title,value)
 }
-const modalOpen = ref(true)
+const modalOpen = ref(false)
 </script>
 <template>
 	<div class="bg-gray-100 w-screen h-screen flex items-center justify-center">

@@ -3,7 +3,6 @@
 
 
 import PricingPlanCard, { type PricingPlanCardProps } from '~/components/pricing-plans/PricingPlanCard.vue'
-import { Switch } from '~/components/ui/switch'
 
 const colorButtonMap = new Map<number, string>( [
 	[ 0, 'bg-white' ],

@@ -10,7 +10,6 @@
 
 import MySlider from '~/components/playlist/MySlider.vue'
 import { useVideoPlayer } from '~/components/video-player/useVideoPlayer'
-import VideoButton from '~/components/video-player/VideoButton.vue'
 import { formatSongDuration } from '~/lib/formatSongDuration'
 
 const emit = defineEmits<{

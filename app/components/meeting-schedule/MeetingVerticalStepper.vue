@@ -13,6 +13,7 @@ import {
 	type MeetingStatusType,
 	useMeetingSchedule
 } from '~/components/meeting-schedule/useMeetingSchedule'
+
 const formatted = (date: Date)=>useDateFormat(date, 'HH:mm A')
 
 const colorMeetingStatusParser = ( status: MeetingStatusType ): string => {
