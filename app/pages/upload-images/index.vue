@@ -18,6 +18,8 @@ const onCancel = (name : string) => {
 const onAddFile = (file : File) => {
 	files.value.set(file.name, file)
 }
+
+
 </script>
 
 <template>

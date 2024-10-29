@@ -1,7 +1,6 @@
 <script setup
 	lang="ts">
 
-import type { HTMLAttributes } from 'vue'
 import {
 	Select,
 	SelectContent,
@@ -13,20 +12,21 @@ import { cn } from '~/lib/utils'
 
 interface MySelectProps {
 	label: string
+	placeholder: string
 	values: string[]
 	buttonClass ?: string
 }
 const props = defineProps<MySelectProps>()
-const valueSelected = defineModel<string>( {
-	default: ''
+const valueSelected = defineModel<string | undefined>( {
+	default: undefined
 } )
 </script>
 
 <template>
 	<Select v-model="valueSelected" :name="label">
-		<SelectTrigger :class="cn(valueSelected.length ? 'dark:border-gray-200 border-gray-800' : 'dark:border-gray-800 border-gray-200',props.buttonClass)"
-			class="custom-shadow rounded-2xl border dark:text-white">
-			<SelectValue :placeholder="label"/>
+		<SelectTrigger :class="cn(valueSelected?.length ? 'dark:border-gray-200 border-gray-800' : 'dark:border-gray-800 border-gray-200', 'border',props.buttonClass)"
+			class="custom-shadow rounded-2xl dark:text-white">
+			<SelectValue :placeholder/>
 		</SelectTrigger>
 		<SelectContent class="bg-white rounded-2xl my-2 border-0 custom-shadow">
 			<SelectItem
