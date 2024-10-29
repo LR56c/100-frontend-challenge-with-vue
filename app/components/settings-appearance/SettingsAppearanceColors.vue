@@ -22,7 +22,7 @@ const colorSelected = defineModel<string>( {
 
 const colorClass = ref<string[]>( [] )
 
-const parseColor = ( color: MyColors ): string => {
+const parseColor = ( color: SettingsAppearanceColorsType ): string => {
 	switch ( color ) {
 		case 'orange':
 			return 'bg-orange-600'
