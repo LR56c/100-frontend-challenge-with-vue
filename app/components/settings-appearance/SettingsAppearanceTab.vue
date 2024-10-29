@@ -68,6 +68,7 @@ const selectTheme = ( theme: Theme ) => {
 				</div>
 			</div>
 			<my-select button-class="basis-[40%]"
+				placeholder="Select Language"
 				label="Select Language"
 				:values="languages"></my-select>
 		</div>
