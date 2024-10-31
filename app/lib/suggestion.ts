@@ -35,7 +35,6 @@ export default {
 				} )
 			},
 			onKeyDown( props ) {
-					console.log('verify escape',props.event)
 				if ( props.event.key === 'Escape' ) {
 					popup[0].hide()
 					return true

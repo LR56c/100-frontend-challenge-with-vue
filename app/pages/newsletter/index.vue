@@ -33,7 +33,7 @@ const text         = ref( '' )
 						class="block w-full p-2 ps-8 text-sm border border-gray-400 rounded-2xl"
 					/>
 				</div>
-				<button @click="console.log('input:', text)"
+				<button
 					ref="button"
 					class="transition-all gradient text-white w-full py-2 rounded-2xl font-medium">
 					Sign Up

@@ -51,7 +51,6 @@ export default {
 			this.selectedIndex = index
 		},
 		onKeyDown( { event } ) {
-			console.log( 'keydown', event )
 			if ( event.key === 'ArrowUp' ) {
 				this.upHandler()
 				return true
@@ -68,7 +67,6 @@ export default {
 			return false
 		},
 		upHandler() {
-			console.log( 'up' )
 			this.selectedIndex =
 				( ( this.selectedIndex + this.items.length ) - 1 ) % this.items.length
 		},
@@ -82,7 +80,7 @@ export default {
 			const item = this.items[index]
 
 			if ( item ) {
-				this.command( { id: item } )
+				this.command( { id: item.name } )
 			}
 		}
 	}
