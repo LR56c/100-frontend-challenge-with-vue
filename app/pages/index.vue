@@ -226,6 +226,11 @@ const list: ChallengeCardProps[] = [
 		link: '/markdown-post',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/markdown-post.jpeg?t=1719059648417',
 		day : 48
+	},
+	{
+		link: '/app-navigation',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/app-navigation.jpeg?t=1719059648521',
+		day : 49
 	}
 ].reverse()
 
