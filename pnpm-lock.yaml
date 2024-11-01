@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@ckeditor/ckeditor5-vue':
-        specifier: ^7.2.0
-        version: 7.2.0(ckeditor5@43.3.0)(vue@3.5.11(typescript@5.6.3))
+      '@formkit/auto-animate':
+        specifier: ^0.8.2
+        version: 0.8.2
       '@github/relative-time-element':
         specifier: ^4.4.3
         version: 4.4.3
@@ -468,12 +468,6 @@ packages:
   '@ckeditor/ckeditor5-indent@43.3.0':
     resolution: {integrity: sha512-6En69K49p39NAJakPKjX3Wr8jSTMaJFOIWYH2tVjCLW+CuzDJ4j7CISpiCqMGW91GnV+KTxW0cCpjr1XBGtMDw==}
 
-  '@ckeditor/ckeditor5-integrations-common@2.1.0':
-    resolution: {integrity: sha512-vn6qMb36sl6eSCc27dvThk6xISif59MxnxZmRBC440TyP7S9ZcS0ai4yHd5QyaH70ZIe0lhS7DWdLaiKtBggVQ==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      ckeditor5: '>=42.0.0 || ^0.0.0-nightly'
-
   '@ckeditor/ckeditor5-language@43.3.0':
     resolution: {integrity: sha512-MGhM0yCtpac3TklC8KsxjtI7JU4T2NC7ZwGXkGChchsDLmHAxSOJO9T48ScSwiv+GF4lrYN+6KQ6WY6oe7YuSg==}
 
@@ -545,13 +539,6 @@ packages:
 
   '@ckeditor/ckeditor5-utils@43.3.0':
     resolution: {integrity: sha512-wiWFwdl/nUsTpPbi1MLT1sdFwXM8P0KVKxnvt4naF//ETn1LECPrIMBEIAeFnn17mamLaQYTEV+5/FadqIYolg==}
-
-  '@ckeditor/ckeditor5-vue@7.2.0':
-    resolution: {integrity: sha512-Q0BG7ie2YAH3ZhTK2rCGCGR1aeZGBzpoq1gl8Omp6o8b6qqvEt0T03Pps2N/+fa1OihR9Uf1NAWE0l8Zp9vOLg==}
-    engines: {node: '>=18.0.0'}
-    peerDependencies:
-      ckeditor5: '>=42.0.0 || ^0.0.0-nightly'
-      vue: ^3.4.0
 
   '@ckeditor/ckeditor5-watchdog@43.3.0':
     resolution: {integrity: sha512-jqJU/F5eST+2Q0eELti3oobDbd+aqtR01uTYE2Ys9429/XgUP7f18ApCzqlr6iLrtQSHAj5245CA2KSD6Chjfw==}
@@ -1056,6 +1043,9 @@ packages:
 
   '@floating-ui/vue@1.1.5':
     resolution: {integrity: sha512-ynL1p5Z+woPVSwgMGqeDrx6HrJfGIDzFyESFkyqJKilGW1+h/8yVY29Khn0LaU6wHBRwZ13ntG6reiHWK6jyzw==}
+
+  '@formkit/auto-animate@0.8.2':
+    resolution: {integrity: sha512-SwPWfeRa5veb1hOIBMdzI+73te5puUBHmqqaF1Bu7FjvxlYSz/kJcZKSa9Cg60zL0uRNeJL2SbRxV6Jp6Q1nFQ==}
 
   '@github/relative-time-element@4.4.3':
     resolution: {integrity: sha512-EVKokqx9/DdUAZ2l9WVyY51EtRCO2gQWWMvsRIn7r4glJ91q9CXcnILVHZVCpfD52ucXUhUvtYsAjNJ4qP4uIg==}
@@ -7022,10 +7012,6 @@ snapshots:
       '@ckeditor/ckeditor5-utils': 43.3.0
       ckeditor5: 43.3.0
 
-  '@ckeditor/ckeditor5-integrations-common@2.1.0(ckeditor5@43.3.0)':
-    dependencies:
-      ckeditor5: 43.3.0
-
   '@ckeditor/ckeditor5-language@43.3.0':
     dependencies:
       '@ckeditor/ckeditor5-core': 43.3.0
@@ -7214,13 +7200,6 @@ snapshots:
     dependencies:
       '@ckeditor/ckeditor5-ui': 43.3.0
       lodash-es: 4.17.21
-
-  '@ckeditor/ckeditor5-vue@7.2.0(ckeditor5@43.3.0)(vue@3.5.11(typescript@5.6.3))':
-    dependencies:
-      '@ckeditor/ckeditor5-integrations-common': 2.1.0(ckeditor5@43.3.0)
-      ckeditor5: 43.3.0
-      lodash-es: 4.17.21
-      vue: 3.5.11(typescript@5.6.3)
 
   '@ckeditor/ckeditor5-watchdog@43.3.0':
     dependencies:
@@ -7545,6 +7524,8 @@ snapshots:
     transitivePeerDependencies:
       - '@vue/composition-api'
       - vue
+
+  '@formkit/auto-animate@0.8.2': {}
 
   '@github/relative-time-element@4.4.3': {}
 
