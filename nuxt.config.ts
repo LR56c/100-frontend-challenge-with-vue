@@ -41,5 +41,6 @@ export default defineNuxtConfig( {
 		'nuxt-time',
 		'nuxt-countdown',
 		'nuxt-workers',
+		'@formkit/auto-animate/nuxt'
 	]
 } )
