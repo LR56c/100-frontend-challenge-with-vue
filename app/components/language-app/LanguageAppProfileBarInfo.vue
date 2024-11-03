@@ -16,7 +16,7 @@ defineProps<LanguageAppProfileBarInfoProps>()
 <template>
 	<div class="flex justify-between items-center">
 		<div class="flex gap-2 items-center">
-			<NuxtImg preload :key="name" class="w-8 h-8" :src="avatar"/>
+			<img :key="name" class="w-8 h-8" :src="avatar"/>
 			<span class="text-center font-semibold">{{ name }}</span>
 		</div>
 		<language-app-badge :icon :background-enabled="backgroundEnabled" :label></language-app-badge>
