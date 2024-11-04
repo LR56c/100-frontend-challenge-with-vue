@@ -6,20 +6,20 @@ import ExportFileUploaderCard
 	from '~/components/export-file/ExportFileUploaderCard.vue'
 
 const selectedImage = ref<File | undefined>( undefined )
-const selectedData = ref<ExportFileOutput | undefined>( undefined )
+const selectedData  = ref<ExportFileOutput | undefined>( undefined )
 
 const selectedImageBoolean = computed( () => Boolean( selectedImage.value ) )
 
-const imageUrl = ref<string | undefined>( undefined )
+const imageUrl     = ref<string | undefined>( undefined )
 
 const canvasRef = templateRef<HTMLCanvasElement | null>( 'imageCanvas' )
 
-const progressValue = ref(0)
+const progressValue = ref( 0 )
 
 const imageDropZoneRef = ref<HTMLElement>()
 
 const { files, open, reset, onChange } = useFileDialog( {
-	accept: 'image/*',
+	accept  : 'image/*',
 	multiple: false
 } )
 
@@ -34,7 +34,29 @@ function onImageDrop( files: File[] | null ) {
 	selectedImage.value = files?.[0]
 }
 
-const processImage = ( file: File, format: string, quality: number,
+type ExtractImageAttributes = {
+	width: number
+	height: number
+	url: string
+}
+const getImageDimensionAndURL = ( file: File ): Promise<ExtractImageAttributes> => {
+	return new Promise<ExtractImageAttributes>( ( resolve ) => {
+		const img  = new Image()
+		const url  = URL.createObjectURL( file )
+		img.onload = () => {
+			const width  = img.width
+			const height = img.height
+			resolve( {
+				width : width,
+				height: height,
+				url   : url
+			} )
+		}
+		img.src    = url
+	} )
+}
+
+const processImageWithCanvas = ( file: File, format: string, quality: number,
 	size: number ): Promise<string> => {
 	return new Promise( ( resolve ) => {
 		const img  = new Image()
@@ -57,10 +79,10 @@ const processImage = ( file: File, format: string, quality: number,
 
 const processExportClient = async ( data: ExportFileOutput ) => {
 	progressValue.value = 10
-	selectedData.value = data
-	imageUrl.value =
-		await processImage( selectedImage.value!, data.format, data.quality,
-			data.size )
+	selectedData.value  = data
+	imageUrl.value      =
+		await processImageWithCanvas( selectedImage.value!, data.format,
+			data.quality, data.size )
 	progressValue.value = 100
 }
 const processExportServer = async ( data: ExportFileOutput ) => {
@@ -94,15 +116,15 @@ const processExportServer = async ( data: ExportFileOutput ) => {
 
 const cancelExport = () => {
 	selectedImage.value = undefined
-	imageUrl.value = undefined
-	selectedData.value = undefined
+	imageUrl.value      = undefined
+	selectedData.value  = undefined
 	progressValue.value = 0
 	reset()
 }
 
 const pauseExport = () => {
 	progressValue.value = 0
-	imageUrl.value = undefined
+	imageUrl.value      = undefined
 }
 
 const playExport = async () => {
@@ -114,13 +136,15 @@ const playExport = async () => {
 	<div class="bg-zinc-600 w-screen h-screen flex gap-4 items-center justify-center p-20">
 		<div
 			ref="imageDropZoneRef"
-				@click="open"
+			@click="open"
 			:class="[selectedImage ? '' : 'cursor-pointer' ,selectedImage ? 'border-0' : isOverDropZone ? 'border-2 border-blue-400 border-dotted' : 'border-white/50 border-2 animate-pulse' ]"
 			class="h-96 w-96 rounded-2xl bg-black/50 shadow-lg flex items-center justify-center">
-			<div v-if="!selectedImage" class="text-white">
+			<div v-if="!selectedImage"
+				class="text-white">
 				<span class="font-semibold">Click to upload</span> or drag and drop
 			</div>
-			<div v-if="selectedImage && !imageUrl" class="text-white">
+			<div v-if="selectedImage && !imageUrl"
+				class="text-white">
 				Click 'Export file' to process image
 			</div>
 			<img v-if="imageUrl"
