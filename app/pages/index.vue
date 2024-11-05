@@ -248,6 +248,11 @@ const list: ChallengeCardProps[] = [
 		day : 52
 	},
 	{
+		link: '/billing-page',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/billing-page.jpeg?t=1719059651524',
+		day : 53
+	},
+	{
 		link: '/article-summary',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/article-summary.jpeg?t=1719059651456',
 		day : 54
