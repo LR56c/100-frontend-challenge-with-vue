@@ -25,7 +25,7 @@ const completedStep = computed( () => {
 
 <template>
 	<StepperRoot
-		:default-value="1"
+		:model-value="completedStep"
 		class="flex gap-2 h-full w-full max-w-[32rem]"
 	>
 		<StepperItem

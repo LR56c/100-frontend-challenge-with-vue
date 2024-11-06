@@ -21,10 +21,10 @@ const completedStep = computed( () => {
 			:key="index"
 			:style="{ zIndex: props.steps.length - index + 10 }"
 			:class="[index === 0 ? 'w-24' : 'w-32',{
-				'bg-[#3734ff]': index === completedStep-1,
-				'bg-blue-300': index < completedStep-1,
-				'bg-gray-300': index > completedStep-1,
-				'my-clip': index !== steps.length -1,
+				'bg-[#3734ff]': index === completedStep,
+				'bg-blue-300': index < completedStep,
+				'bg-gray-300': index > completedStep,
+				'my-clip': index !== steps.length - 1,
 			}]"
 			class="-mr-8 h-12 text-sm rounded-2xl indent-2 text-white font-semibold relative flex items-center justify-center">
 			{{ step }}
