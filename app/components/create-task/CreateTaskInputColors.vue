@@ -32,7 +32,7 @@ const color = defineModel<string>()
 </script>
 
 <template>
-	<div class="flex text-[#727272] flex-col w-full gap-1">
+	<div class="h-fit flex text-[#727272] flex-col w-full gap-1">
 		<label v-if="label">{{ label }}</label>
 		<RadioGroupRoot
 			v-model="color"

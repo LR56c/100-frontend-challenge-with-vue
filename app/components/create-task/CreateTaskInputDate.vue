@@ -41,7 +41,7 @@ onMounted( () => {
 </script>
 
 <template>
-	<div class="w-full h-full relative text-[#727272] flex flex-col gap-1">
+	<div class="w-full h-fit relative text-[#727272] flex flex-col gap-1">
 		<label v-if="label">{{ label }}</label>
 		<Popover>
 			<PopoverTrigger>

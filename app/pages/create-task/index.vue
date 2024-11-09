@@ -66,7 +66,7 @@ const reset = () => {
 <template>
 	<div class="w-screen h-screen bg-[#4d4d4d] flex flex-col gap-4 items-center justify-center">
 		<form @submit="onSubmit"
-			class="w-full max-w-sm bg-[#212121] min-h-[500px] max-h-[500px] rounded-2xl shadow-lg flex flex-col p-4 justify-between">
+			class="w-full max-w-sm bg-[#212121] gap-4 h-fit rounded-2xl shadow-lg flex flex-col p-4 justify-between">
 			<span class="text-white text-xl font-semibold">Create a Task</span>
 			<FormField v-slot="{ componentField }"
 				name="title">

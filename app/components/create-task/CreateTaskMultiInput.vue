@@ -61,7 +61,7 @@ watch( modelValue.value, ( value ) => {
 </script>
 
 <template>
-	<div class="w-full h-full relative text-[#727272] flex flex-col gap-1">
+	<div class="w-full h-fit relative text-[#727272] flex flex-col gap-1">
 		<label v-if="label">{{ label }}</label>
 		<TagsInput class="px-0 gap-0 w-full border-0 bg-[#2c2c2c] rounded-2xl"
 			:model-value="modelValue">
