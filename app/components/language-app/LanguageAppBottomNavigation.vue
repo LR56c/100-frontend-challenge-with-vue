@@ -24,6 +24,6 @@ const indexSelected = ref(1)
 
 <style scoped>
 .my-shadow{
-	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1); /* Sombra */
+	box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
 }
 </style>
