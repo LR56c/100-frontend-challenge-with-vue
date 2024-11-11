@@ -282,6 +282,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/code-verification.jpeg?t=1719059650079',
 		day : 60
 	},
+	{
+		link: '/flight-ticket',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/flight-ticket.jpeg?t=1719059649400',
+		day : 61
+	},
 ].reverse()
 
 </script>
