@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@chenfengyuan/vue-barcode':
+        specifier: '2'
+        version: 2.0.2(jsbarcode@3.11.6)(vue@3.5.11(typescript@5.6.3))
       '@formkit/auto-animate':
         specifier: ^0.8.2
         version: 0.8.2
@@ -98,6 +101,9 @@ importers:
       highlight.js:
         specifier: ^11.10.0
         version: 11.10.0
+      jsbarcode:
+        specifier: '3'
+        version: 3.11.6
       lucide-vue-next:
         specifier: ^0.445.0
         version: 0.445.0(vue@3.5.11(typescript@5.6.3))
@@ -377,6 +383,12 @@ packages:
   '@babel/types@7.25.7':
     resolution: {integrity: sha512-vwIVdXG+j+FOpkwqHRcBgHLYNL7XMkufrlaFvL9o6Ai9sJn9+PdyIL5qa0XzTZw084c+u9LOls53eoZWP/W5WQ==}
     engines: {node: '>=6.9.0'}
+
+  '@chenfengyuan/vue-barcode@2.0.2':
+    resolution: {integrity: sha512-lHQhYfcqWeeA/UYoe4O+O6c8WD+t9WO8SiWohKOVVIiwPhcvC58YxhvlFvJme0/CPL7+Sh1XCpMaC9Mo2Dt5jQ==}
+    peerDependencies:
+      jsbarcode: ^3.11.0
+      vue: ^3.0.0
 
   '@ckeditor/ckeditor5-adapter-ckfinder@43.3.0':
     resolution: {integrity: sha512-cAG7zXdpo8IFFTbGxgbwyT3+fJa0Xx9pKuhBV+m/9b+aGuvzVqxu9Lqow/kHb6dTTPY3L7i7ayc3Yt4cAgxBaA==}
@@ -4242,6 +4254,9 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
+  jsbarcode@3.11.6:
+    resolution: {integrity: sha512-G5TKGyKY1zJo0ZQKFM1IIMfy0nF2rs92BLlCz+cU4/TazIc4ZH+X1GYeDRt7TKjrYqmPfTjwTBkU/QnQlsYiuA==}
+
   jsbn@1.1.0:
     resolution: {integrity: sha512-4bYVV3aAMtDTTu4+xsDYa6sy9GyJ69/amsu9sYF2zqjiEoZA5xJi3BrfX3uY+/IekIu7MwdObdbDWpoZdBv3/A==}
 
@@ -6765,6 +6780,11 @@ snapshots:
       '@babel/helper-string-parser': 7.25.7
       '@babel/helper-validator-identifier': 7.25.7
       to-fast-properties: 2.0.0
+
+  '@chenfengyuan/vue-barcode@2.0.2(jsbarcode@3.11.6)(vue@3.5.11(typescript@5.6.3))':
+    dependencies:
+      jsbarcode: 3.11.6
+      vue: 3.5.11(typescript@5.6.3)
 
   '@ckeditor/ckeditor5-adapter-ckfinder@43.3.0':
     dependencies:
@@ -12207,6 +12227,8 @@ snapshots:
   js-yaml@4.1.0:
     dependencies:
       argparse: 2.0.1
+
+  jsbarcode@3.11.6: {}
 
   jsbn@1.1.0: {}
 

@@ -10,6 +10,7 @@
 		"postinstall": "nuxt prepare"
 	},
 	"dependencies": {
+		"@chenfengyuan/vue-barcode": "2",
 		"@formkit/auto-animate": "^0.8.2",
 		"@github/relative-time-element": "^4.4.3",
 		"@internationalized/date": "^3.5.6",
@@ -40,6 +41,7 @@
 		"embla-carousel-vue": "^8.3.0",
 		"fuse.js": "^7.0.0",
 		"highlight.js": "^11.10.0",
+		"jsbarcode": "3",
 		"lucide-vue-next": "^0.445.0",
 		"nuxt": "^3.13.0",
 		"nuxt-countdown": "^1.2.0",
