@@ -1,43 +1,29 @@
-import type { WeatherResponse } from '~/components/weather-app/models/weather'
-
-export type WeatherForecast = {
-	date: string
-	temperature: number
-	weather: string
-	icon: string
-}
-
-export type WeatherInfo = {
-	uv: number
-	percentageRain: number
-	aq: number
-}
-
-export type Weather = {
-	temperature: number
-	location: string
-	info: WeatherInfo
-}
+import { WeatherNuxtApiData } from '~/components/weather-app/data/weather-nuxt-api-data'
+import type { WeatherRepository } from '~/components/weather-app/data/weather-repository'
+import type { Weather } from '~/components/weather-app/weather'
 
 export const useWeatherApp = defineStore( 'weather-app', () => {
 
-	const getWeatherForecast = async ( lat: number,
-		lon: number ): Promise<WeatherResponse | undefined> => {
+	const weatherData = ref<Weather | undefined>( undefined )
 
-		const {data, error} = await useFetch( '/api/weather', {
-			method: 'GET',
-			query: {
-				lat,
-				lon
-			}
-		} )
-		if( error.value ) {
-			return undefined
+	const getWeatherForecast = async ( lat: number,
+		lon: number ): Promise<void> => {
+		try {
+			const weather : WeatherRepository = new WeatherNuxtApiData()
+			// const weather: WeatherRepository = new WeatherLocalData()
+			const response                   = await weather.getWeatherForecast( lat,
+				lon )
+			// console.log('store:', response )
+			weatherData.value = response.data
 		}
-		return data.value as WeatherResponse
+		catch ( e ) {
+			weatherData.value = undefined
+		}
 	}
 
+
 	return {
-		getWeatherForecast
+		getWeatherForecast,
+		weatherData       : readonly( weatherData )
 	}
 } )

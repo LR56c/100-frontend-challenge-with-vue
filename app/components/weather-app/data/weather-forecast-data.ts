@@ -8,7 +8,7 @@ export const WeatherInfoSchema = z.object({
 });
 export type WeatherInfo = z.infer<typeof WeatherInfoSchema>;
 
-export const WeatherSchema = z.object({
+export const WeatherForecastSchema = z.object({
 	"app_max_temp": z.number(),
 	"app_min_temp": z.number(),
 	"clouds": z.number(),
@@ -48,12 +48,12 @@ export const WeatherSchema = z.object({
 	"wind_gust_spd": z.number(),
 	"wind_spd": z.number(),
 });
-export type Weather = z.infer<typeof WeatherSchema>;
+export type WeatherForecastData = z.infer<typeof WeatherForecastSchema>;
 
 export const WeatherResponseSchema = z.object({
 	"city_name": z.string(),
 	"country_code": z.string(),
-	"data": z.array(WeatherSchema),
+	"data": z.array(WeatherForecastSchema),
 	"lat": z.number(),
 	"lon": z.number(),
 	"state_code": z.string(),

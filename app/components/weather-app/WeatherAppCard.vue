@@ -6,7 +6,10 @@ interface WeatherAppCardProps {
 	day: string
 }
 
-defineProps<WeatherAppCardProps>()
+const props = defineProps<WeatherAppCardProps>()
+const dayFormat = computed(() => {
+	return useDateFormat(props.day, 'dddd').value
+})
 </script>
 
 <template>
@@ -17,7 +20,7 @@ defineProps<WeatherAppCardProps>()
 		<div class="w-[75px] h-20 text-center pb-4 flex items-end justify-center rounded-2xl p-2 font-bold text-2xl bg-indigo-100">
 			{{ temperature }}°
 		</div>
-		<span class="text-sm text-center font-semibold">{{ day }}</span>
+		<span class="text-sm text-center font-semibold">{{ dayFormat }}</span>
 	</div>
 </template>
 

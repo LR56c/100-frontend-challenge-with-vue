@@ -1,6 +1,6 @@
 <script setup
 	lang="ts">
-import type { WeatherInfo } from '~/components/weather-app/useWeatherApp'
+import type { WeatherInfo } from '~/components/weather-app/weather'
 import WeatherAppInfoLabel
 	from '~/components/weather-app/WeatherAppInfoLabel.vue'
 
