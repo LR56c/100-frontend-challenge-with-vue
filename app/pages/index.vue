@@ -292,8 +292,12 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/testimonials.jpeg?t=1719059651461',
 		day : 62
 	},
+	{
+		link: '/weather-app',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/weather-app.jpeg?t=1719059651308',
+		day : 63
+	},
 ].reverse()
-
 </script>
 
 <template>
