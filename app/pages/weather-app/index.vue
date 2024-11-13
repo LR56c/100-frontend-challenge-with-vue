@@ -4,14 +4,13 @@
 import {
 	useWeatherApp,
 } from '~/components/weather-app/useWeatherApp'
-
-const lat   = -33.537675
-const lon   = -71.586680
 const store = useWeatherApp()
+	const { coords} = useGeolocation()
 
-onMounted( () => {
-	store.getWeatherForecast( lat, lon )
+watchOnce( coords, () => {
+	store.getWeatherForecast(coords.value.latitude, coords.value.longitude)
 } )
+
 const weather = computed( () => store.weatherData )
 </script>
 
