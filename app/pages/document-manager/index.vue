@@ -107,18 +107,18 @@ const onSave = (title: string, content: string) => {
 				<hr class="h-full border border-black/75"/>
 				<div class="w-full h-full p-4">
 					<div class="w-full h-full"
-						v-if="lastContentDoc && lastNoteDoc">
+						v-if="selectedDoc">
 						<document-manager-content-preview
 							v-if="!isEdit"
 							@edit="onEdit"
-							:content="selectedDoc?.content || ''"
-							:title="selectedDoc?.name || ''"
+							:content="selectedDoc.content"
+							:title="selectedDoc.name"
 						></document-manager-content-preview>
 						<document-manager-content-edit
 							v-else
 							@save="onSave"
-							:content="selectedDoc?.content || ''"
-							:title="selectedDoc?.name || ''"
+							:content="selectedDoc.content"
+							:title="selectedDoc.name"
 						></document-manager-content-edit>
 					</div>
 				</div>
