@@ -4,15 +4,7 @@
 import SettingsAppearanceColors
 	, { type SettingsAppearanceColorsType } from '~/components/settings-appearance/SettingsAppearanceColors.vue'
 import MySelect from '~/components/shared/MySelect.vue'
-
-type Theme = 'Light' | 'Dark'
-
-type ThemePreview = {
-	name: Theme
-	label: string
-	themeColor: string
-	backgroundColor: string
-}
+import { useTheme } from '~/components/shared/theme/useTheme'
 
 const languages = [
 	'English',
@@ -23,38 +15,22 @@ const languages = [
 	'Portuguese'
 ]
 
-const themes: ThemePreview[] = [
-	{
-		name           : 'Light',
-		label          : 'Light theme',
-		themeColor     : 'bg-white',
-		backgroundColor: 'bg-gray-200'
-	},
-	{
-		name           : 'Dark',
-		label          : 'Dark theme',
-		themeColor     : 'bg-gray-800',
-		backgroundColor: 'bg-gray-950'
-	}
-]
-
 const colors: SettingsAppearanceColorsType[] = [
 	'blue',
 	'green',
 	'pink',
 	'orange'
 ]
-const isDark                                 = useDark()
-const toggleDark                             = useToggle( isDark )
-const selectedTheme                          = ref<Theme>( 'Light' )
+
+const theme = useTheme()
 
 onMounted( () => {
-	selectedTheme.value = isDark ? 'Dark' : 'Light'
+	theme.selectTheme(theme.isDark ? 'Dark' : 'Light')
 } )
 
-const selectTheme = ( theme: Theme ) => {
-	selectedTheme.value = theme
-	toggleDark( theme === 'Dark' )
+
+const changeTheme = (t: string) => {
+	theme.selectTheme(t)
 }
 </script>
 
@@ -81,13 +57,13 @@ const selectTheme = ( theme: Theme ) => {
 			</div>
 			<div class="w-full flex items-center gap-4">
 				<settings-appearance-theme-preview
-					v-for="theme in themes"
-					:key="theme.name"
-					@click="selectTheme(theme.name)"
-					:selected="selectedTheme === theme.name"
-					:label="theme.label"
-					:theme-color="theme.themeColor"
-					:background-color="theme.backgroundColor"></settings-appearance-theme-preview>
+					v-for="t in theme.themesAvailable"
+					:data-selected="t.name === theme.currentTheme"
+					:key="t.name"
+					@click="changeTheme(t.name)"
+					:label="t.label"
+					:theme-color="t.themeColor"
+					:background-color="t.backgroundColor"></settings-appearance-theme-preview>
 			</div>
 		</div>
 		<div class="w-full flex items-center">
