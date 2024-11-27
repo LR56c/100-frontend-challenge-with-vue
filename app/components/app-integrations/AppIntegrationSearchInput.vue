@@ -1,10 +1,12 @@
 <script setup
 	lang="ts">
-interface AddShotSearchProps {
+import type { HTMLAttributes } from 'vue'
+
+interface AppIntegrationSearchInputProps {
 	placeholder: string
 }
 
-defineProps<AddShotSearchProps>()
+defineProps<AppIntegrationSearchInputProps>()
 
 const emit = defineEmits<{
 	search: [ string ]
@@ -31,7 +33,7 @@ watchDebounced( search, () => {
 			required
 			id="default-search"
 			v-model="search"
-			class="block w-full p-2 ps-8 text-sm bg-gray-100 border-2 border-purple-600 placeholder:text-zinc-400 rounded-2xl"
+			class="block w-full h-fit p-2 ps-8 text-sm bg-gray-100 border border-black/60 placeholder:text-zinc-400 rounded-2xl"
 			:placeholder/>
 	</div>
 </template>
