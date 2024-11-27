@@ -363,6 +363,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/e-book-store.jpeg?t=1719059650250',
 		day : 76
 	},
+	{
+		link: '/app-integrations',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/app-integrations.jpeg?t=1719059649968',
+		day : 77
+	},
 ].reverse()
 </script>
 
