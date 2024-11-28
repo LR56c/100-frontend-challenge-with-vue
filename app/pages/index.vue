@@ -368,6 +368,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/app-integrations.jpeg?t=1719059649968',
 		day : 77
 	},
+	{
+		link: '/audio-player',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/audio-player.jpeg?t=1719059648953',
+		day : 78
+	},
 ].reverse()
 </script>
 
