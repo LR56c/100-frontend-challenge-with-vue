@@ -388,6 +388,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/delivery-details.jpeg?t=1719059650923',
 		day : 81
 	},
+	{
+		link: '/color-palette',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/color-palette.jpeg?t=1719059648756',
+		day : 82
+	},
 ].reverse()
 </script>
 
