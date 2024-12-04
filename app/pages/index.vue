@@ -394,8 +394,8 @@ const list: ChallengeCardProps[] = [
 		day : 82
 	},
 	{
-		link: '/socials-share',
-		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/socials-share.jpeg?t=1719059651006',
+		link: '/buy-a-coffee',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/buy-a-coffee.jpeg?t=1719059649724',
 		day : 83
 	},
 ].reverse()
