@@ -398,6 +398,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/buy-a-coffee.jpeg?t=1719059649724',
 		day : 83
 	},
+	{
+		link: '/customer-reviews',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/customer-reviews.jpeg?t=1719059651764',
+		day : 84
+	},
 ].reverse()
 </script>
 
