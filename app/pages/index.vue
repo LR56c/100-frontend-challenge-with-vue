@@ -394,14 +394,24 @@ const list: ChallengeCardProps[] = [
 		day : 82
 	},
 	{
+		link: '/social-share',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/socials-share.jpeg?t=1719059651006',
+		day : 83
+	},
+	{
 		link: '/buy-a-coffee',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/buy-a-coffee.jpeg?t=1719059649724',
-		day : 83
+		day : 84
 	},
 	{
 		link: '/customer-reviews',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/customer-reviews.jpeg?t=1719059651764',
-		day : 84
+		day : 85
+	},
+	{
+		link: '/chatbot',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/chatbot.jpeg?t=1719059650620',
+		day : 86
 	},
 ].reverse()
 </script>
