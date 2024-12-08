@@ -35,7 +35,7 @@ const handleClick = ( num: NumPad ) => {
 </script>
 
 <template>
-	<div class="grid grid-cols-3 w-full justify-center">
+	<div class="grid grid-cols-3 w-full justify-items-center">
 		<div v-for="num in nums"
 			:key="num.num"
 			class="p-2">

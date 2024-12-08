@@ -38,7 +38,7 @@ const removeNumber = () => {
 			/>
 		</PinInputRoot>
 		<button class="text-gray-400 underline text-sm">Cant login</button>
-		<div class="h-52 w-full flex">
+		<div class="h-56 w-full flex">
 			<fingerprint-number-pad
 				@add="addNumber"
 				@remove="removeNumber"
