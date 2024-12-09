@@ -423,6 +423,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/voice-call.jpeg?t=1719059648948',
 		day : 89
 	},
+	{
+		link: '/my-devices',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/my-devices.jpeg?t=1719059649903',
+		day : 90
+	},
 ].reverse()
 </script>
 
