@@ -368,7 +368,7 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/app-integrations.jpeg?t=1719059649968',
 		day : 77
 	},
-  {
+	{
 		link: '/audio-player',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/audio-player.jpeg?t=1719059648953',
 		day : 78
@@ -377,7 +377,7 @@ const list: ChallengeCardProps[] = [
 		link: '/payment-plan',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/payment-plan.jpeg?t=1719059651563',
 		day : 79
-    },
+	},
 	{
 		link: '/articles-grid',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/articles-grid.jpeg?t=1719059650871',
@@ -437,18 +437,36 @@ const list: ChallengeCardProps[] = [
 		link: '/search-filters',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/search-filters.jpeg?t=1719059650907',
 		day : 92
-	},
+	}
 ].reverse()
+const customList                 = [
+	{
+		link : '/calcule-days',
+		title: 'Project calcule days'
+	}
+]
 </script>
 
 <template>
-	<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
-		<ChallengeCard v-for="(c, i) in list"
-			k
-			:key="i"
-			:link="c.link"
-			:img="c.img"
-			:day="c.day"></ChallengeCard>
+	<div class="flex flex-col w-full h-full">
+		<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
+			<NuxtLink
+				v-for="(c,i) in customList"
+				:key="i"
+				:to="c.link">
+				<div class="bg-gray-600 rounded-2xl p-2 flex flex-col items-center justify-center text-white gap-2">
+					<span>{{ c.title }}</span>
+				</div>
+			</NuxtLink>
+		</div>
+		<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
+			<ChallengeCard v-for="(c, i) in list"
+				k
+				:key="i"
+				:link="c.link"
+				:img="c.img"
+				:day="c.day"></ChallengeCard>
+		</div>
 	</div>
 </template>
 
