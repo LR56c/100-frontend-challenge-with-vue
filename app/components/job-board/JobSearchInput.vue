@@ -6,31 +6,33 @@ import { useJobBoard } from '~/components/job-board/useJobBoard'
 
 export interface JobSearchEvent {
 	searchTerm: string
-	location : string
+	location: string
 }
+
 const emit = defineEmits<{
-	search: [JobSearchEvent]
+	search: [ JobSearchEvent ]
 }>()
 
 const onLocationSearch = ( value: string ) => {
-	console.log('location: ', value)
+	console.log( 'location: ', value )
 	location.value = value
 }
-const search = ref('')
-const location= ref('')
+const search           = ref( '' )
+const location         = ref( '' )
 
 const fireSearch = () => {
 	emit( 'search', {
 		searchTerm: search.value,
-		location: location.value,
+		location  : location.value
 	} )
 }
 
 const store = useJobBoard()
 
-const locationValues : MyComboBoxType[] = store.getJobLocations().map( ( location ) => {
-	return { value: location }
-} )
+const locationValues: MyComboBoxType[] = store.getJobLocations()
+                                              .map( ( location ) => {
+	                                              return { value: location }
+                                              } )
 </script>
 
 <template>
@@ -47,7 +49,7 @@ const locationValues : MyComboBoxType[] = store.getJobLocations().map( ( locatio
 					required
 					id="default-search"
 					v-model="search"
-					class="block w-full p-2 ps-8 text-sm text-gray-900 border-r rounded-l-2xl focus:ring-blue-500 focus:border-blue-500"
+					class="block w-full p-2.5 ps-8 text-sm text-gray-900 border-r rounded-l-2xl focus:ring-blue-500 focus:border-blue-500"
 					placeholder="Find a job"/>
 			</div>
 			<my-combo-box
@@ -58,7 +60,8 @@ const locationValues : MyComboBoxType[] = store.getJobLocations().map( ( locatio
 				@select="onLocationSearch"
 			></my-combo-box>
 		</div>
-		<button @click="fireSearch" class="bg-pink-500 text-sm text-white rounded-full px-4 py-1">Search
+		<button @click="fireSearch"
+			class="bg-pink-500 text-sm text-white rounded-full px-4 py-1">Search
 		</button>
 	</div>
 </template>
