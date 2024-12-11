@@ -12,6 +12,7 @@ const {
 	      currentQuiz,
 	      currentIndex,
 	      totalPoints,
+	      completed,
 	      currentPoints,
 	      percentagePoints
       }     = storeToRefs( store )
@@ -34,11 +35,9 @@ const handleNextQuestion = () => {
 	questionSelected.value = undefined
 }
 
-watchEffect(()=>{
-	console.log(percentagePoints.value)
-	console.log(currentPoints.value)
-})
-
+const handleResetQuestion = () => {
+	store.restartQuiz()
+}
 </script>
 
 <template>
@@ -56,7 +55,7 @@ watchEffect(()=>{
 			</div>
 			<quizapp-progress indicator
 				v-model="percentagePoints"
-				:point-value="currentPoints"
+				v-model:point="currentPoints"
 				:max="totalPoints"
 				class="bg-gray-300"
 				class-indicator="bg-gradient-to-r from-[#d798fb] to-[#5550e0]"></quizapp-progress>
@@ -72,14 +71,21 @@ watchEffect(()=>{
 					:key="o"
 					:quiz="o"
 					:label="abcOptionsList[index]"
-					:data-selected="questionSelected === abcOptionsList[index]"
-					@click="questionSelected = abcOptionsList[index]"
+					:data-selected="questionSelected === o"
+					@click="questionSelected = o"
 				></quizapp-card>
 			</div>
 			<button
+				:disabled="completed"
 				@click="handleNextQuestion"
-				class="flex justify-center items-center dark:bg-violet-400 bg-violet-800 rounded-2xl w-full py-2 text-white">
+				class="flex justify-center disabled:cursor-not-allowed disabled:opacity-50 items-center dark:bg-violet-400 bg-violet-800 rounded-2xl w-full py-2 text-white">
 				Next Question
+			</button>
+			<button
+				v-if="completed"
+				@click="handleResetQuestion"
+				class="flex justify-center items-center dark:bg-violet-400 bg-violet-800 rounded-2xl w-full py-2 text-white">
+				Reset Quiz
 			</button>
 		</div>
 	</div>

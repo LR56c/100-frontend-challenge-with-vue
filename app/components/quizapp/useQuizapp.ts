@@ -32,35 +32,38 @@ export const useQuizapp = defineStore( 'quizapp', () => {
 
 	const currentQuizIndex = ref<number>( 0 )
 	const goodAnswers      = ref<number>( 0 )
-
-	const currentQuiz = computed( () => quiz.value[currentQuizIndex.value] )
+	const completed        = ref( false )
+	const currentQuiz      = computed( () => quiz.value[currentQuizIndex.value] )
 
 	const nextQuiz = ( answer: string ) => {
-		console.log( currentQuiz.value?.answer === answer )
 		if ( currentQuiz.value?.answer === answer ) {
 			goodAnswers.value++
 		}
 
-		if ( currentQuizIndex.value === quiz.value.length - 1 ) {
-			currentQuizIndex.value = 0
-			return
+		if ( currentQuizIndex.value < quiz.value.length - 1 ) {
+			currentQuizIndex.value++
 		}
-		currentQuizIndex.value++
+		else {
+			completed.value = true
+		}
 	}
 
 	const restartQuiz = () => {
 		currentQuizIndex.value = 0
+		goodAnswers.value      = 0
+		completed.value        = false
 	}
 
-
 	const totalPoints      = computed( () => quiz.value.length * 10 )
-	const percentagePoints = computed( () => Math.floor( ( goodAnswers.value / quiz.value.length ) * 100 ) )
+	const percentagePoints = computed(
+		() => Math.floor( ( goodAnswers.value / quiz.value.length ) * 100 ) )
 	const currentPoints    = computed( () => goodAnswers.value * 10 )
 
 	return {
 		quiz        : readonly( quiz ),
 		currentQuiz : readonly( currentQuiz ),
 		currentIndex: computed( () => currentQuizIndex.value + 1 ),
+		completed   : readonly( completed ),
 		currentPoints,
 		percentagePoints,
 		totalPoints,

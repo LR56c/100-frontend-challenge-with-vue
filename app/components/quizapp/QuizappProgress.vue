@@ -11,7 +11,6 @@ interface MyProgressProps {
 	class?: HTMLAttributes['class']
 	classIndicator ?: string
 	indicator ?: boolean
-	pointValue : number
 }
 
 const props = withDefaults(
@@ -21,9 +20,9 @@ const props = withDefaults(
 	},
 )
 
-// const pointValue = defineModel<number>('point',{
-// 	default: 0
-// })
+const pointValue = defineModel<number>('point',{
+	default: 0
+})
 
 const delegatedProps = computed(() => {
 	const { class: _, ...delegated } = props
