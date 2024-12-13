@@ -443,6 +443,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/task-manager.jpeg?t=1719059651442',
 		day : 93
 	},
+	{
+		link: '/time-widget',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/time-widget.jpeg?t=1719059650618',
+		day : 94
+	},
 ].reverse()
 </script>
 
