@@ -1,3 +1,4 @@
+import daisyui from "daisyui"
 const animate = require( 'tailwindcss-animate' )
 import fluid, { extract, screens, fontSize } from 'fluid-tailwind'
 
