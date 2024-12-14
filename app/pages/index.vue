@@ -448,6 +448,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/time-widget.jpeg?t=1719059650618',
 		day : 94
 	},
+	{
+		link: '/404',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/404.jpeg?t=1719059648870',
+		day : 95
+	},
 ].reverse()
 </script>
 
