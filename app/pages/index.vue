@@ -453,11 +453,16 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/404.jpeg?t=1719059648870',
 		day : 95
 	},
-	{
+  {
 		link: '/subscribe-card',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/subscribe-card.jpeg?t=1719059650914',
 		day : 96
 	},
+	{
+		link: '/design-assets',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/design-assets.jpeg?t=1719059651272',
+		day : 97
+},
 ].reverse()
 </script>
 
