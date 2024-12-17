@@ -28,7 +28,7 @@ const list: ColumnsCardProps[] = [
 </script>
 
 <template>
-	<div class="bg-[#ffffff] w-screen h-screen flex flex items-center justify-center">
+	<div class="bg-[#ffffff] w-screen h-screen flex items-center justify-center p-20">
 		<columns-card
 			v-for="(item, i) in list"
 			:class="[
