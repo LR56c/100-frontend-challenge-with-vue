@@ -3,8 +3,9 @@ export type SoundType = typeof sounds[number]
 
 export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 
-	const soundResult = createEventHook<SoundType>()
-	const soundRef    = ref<SoundType | undefined>( undefined )
+	const soundResult   = createEventHook<SoundType>()
+	const decibelResult = createEventHook<number>()
+	const soundRef      = ref<SoundType | undefined>( undefined )
 
 	const {
 		      audioInputs: microphones
@@ -26,7 +27,11 @@ export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 		undefined )
 	const analyzer                = ref<AnalyserNode | undefined>(
 		undefined )
-	const onFrame                 = () => {
+
+	let decibelSum   = 0
+	let decibelCount = 0
+
+	const onFrame = () => {
 		if ( !analyzer.value || !pcmData.value ) {
 			return
 		}
@@ -37,7 +42,23 @@ export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 		}
 		decibels.value = Math.sqrt( sumSquares / pcmData.value.length )
 		checkSound( decibels.value )
+		decibelSum += decibels.value
+		decibelCount++
 	}
+
+	const calculateAverage = () => {
+		if ( decibelCount > 0 ) {
+			const average = decibelSum / decibelCount
+			decibelResult.trigger( average )
+		}
+		decibelSum   = 0
+		decibelCount = 0
+	}
+
+	const { pause: pauseInterval, resume: resumeInterval } = useIntervalFn(
+		() => {
+			calculateAverage()
+		}, 1000 )
 
 	const checkSound                             = ( decibels: number ) => {
 		if ( decibels > 0.005 && decibels < 0.05 ) {
@@ -65,16 +86,19 @@ export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 			mediaStreamAudioSourceNode.connect( analyzer.value )
 			pcmData.value = new Float32Array( analyzer.value.fftSize )
 			resumeRaf()
+			resumeInterval()
 			isListening.value = true
 		}
 	}
 	const stopListening                          = () => {
-			if ( audioContext.value ) {
-				audioContext.value.close()
-			}
-			pauseRaf()
-			stop()
-			isListening.value = false
+		if ( audioContext.value ) {
+			audioContext.value.close()
+		}
+		pauseRaf()
+		pauseInterval()
+		stop()
+		isListening.value = false
+		calculateAverage()
 	}
 	const toggleListening                        = () => {
 		if ( isListening.value ) {
@@ -88,6 +112,10 @@ export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 		if ( newStream ) {
 			startListening()
 		}
+	} )
+
+	watch( decibels, ( newDecibels ) => {
+		decibelResult.trigger( newDecibels )
 	} )
 
 	watch( soundRef, ( newSound, oldSound ) => {
@@ -105,6 +133,7 @@ export const useAudioDecibels = defineStore( 'audio-decibels', () => {
 		toggleListening,
 		isListening,
 		soundResult,
+		decibelResult,
 		startListening,
 		stopListening
 	}
