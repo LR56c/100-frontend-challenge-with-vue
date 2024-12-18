@@ -1,3 +1,4 @@
+import { ulid } from 'ulidx'
 import { useAudioDecibels } from '~/components/sleep-app/useAudioDecibels'
 
 export type VoiceRecord = {
@@ -10,17 +11,16 @@ export type VoiceRecord = {
 export const useVoiceRecording = defineStore( 'voice-recording', () => {
 	const recordsList = ref<VoiceRecord[]>( [] )
 
-	// 	const audioStore                                         = useAudioDecibels()
-// 	audioStore.decibelResult.on( sound => {
-// 		console.log( 'diferente: ', sound )
-// 	})
-
-	const addVoice = ( record: VoiceRecord ) => {
-		recordsList.value.push( record )
+	const addVoice = ( record: Blob ) => {
+		recordsList.value.push( {
+			id       : ulid(),
+			name     : `Voice Record ${recordsList.value.length + 1}`,
+			createdAt: new Date(),
+			url      : record
+		})
 	}
 
 	return {
-		// startListening: audioStore.startListening
 		recordsList,
 		addVoice
 	}
