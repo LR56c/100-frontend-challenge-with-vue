@@ -464,6 +464,11 @@ const list: ChallengeCardProps[] = [
 		day : 97
 },
 	{
+		link: '/voice-recording',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/voice-recording.jpeg?t=1719059648582',
+		day : 98
+    },
+    {
 		link: '/columns-card',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/columns-card.jpeg?t=1719059650477',
 		day : 99
