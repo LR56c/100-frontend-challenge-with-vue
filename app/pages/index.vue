@@ -473,6 +473,11 @@ const list: ChallengeCardProps[] = [
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/columns-card.jpeg?t=1719059650477',
 		day : 99
 	},
+	{
+		link: '/footer',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/footer.jpeg?t=1719059650524',
+		day : 100
+	},
 ].reverse()
 </script>
 
