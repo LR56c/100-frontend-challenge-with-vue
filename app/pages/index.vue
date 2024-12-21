@@ -266,19 +266,257 @@ const list: ChallengeCardProps[] = [
 		link: '/project-roadmap',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/project-roadmap.jpeg?t=1719059651925',
 		day : 56
+    },
+    {
+		link: '/game-profile',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/game-profile.jpeg?t=1719059649296',
+		day : 57
+	},
+	{
+		link: '/create-task',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/create-task.jpeg?t=1719059650372',
+		day : 58
+	},
+	{
+		link: '/calculate-tip',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/calculate-tip.jpeg?t=1719059651712',
+		day : 59
+	},
+	{
+		link: '/code-verification',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/code-verification.jpeg?t=1719059650079',
+		day : 60
+	},
+	{
+		link: '/flight-ticket',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/flight-ticket.jpeg?t=1719059649400',
+		day : 61
+	},
+	{
+		link: '/testimonials',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/testimonials.jpeg?t=1719059651461',
+		day : 62
+	},
+	{
+		link: '/weather-app',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/weather-app.jpeg?t=1719059651308',
+		day : 63
+	},
+	{
+		link: '/document-manager',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/document-manager.jpeg?t=1719059650217',
+		day : 64
+	},
+	{
+		link: '/interests',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/interests.jpeg?t=1719059650743',
+		day : 65
+	},
+	{
+		link: '/navigation-ui',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/navigation-ui.jpeg?t=1719059650254',
+		day : 66
+	},
+	{
+		link: '/select-account',
+		img : 'https://mqzzwg' +
+			'avxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/select-account.jpeg?t=1719059651606',
+		day : 67
+	},
+	{
+		link: '/user-satisfaction',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/user-satisfaction.jpeg?t=1719059647486',
+		day : 68
+	},
+	{
+		link: '/profile-settings',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/profile-settings.jpeg?t=1719059651424',
+		day : 69
+	},
+	{
+		link: '/cookies-banner',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/cookies-banner.jpeg?t=1719059650875',
+		day : 70
+	},
+	{
+		link: '/email-client',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/email-client.jpeg?t=1719059649144',
+		day : 71
+	},
+	{
+		link: '/image-collections',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/image-collections.jpeg?t=1719059650990',
+		day : 72
+	},
+	{
+		link: '/push-notification',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/push-notification.jpeg?t=1719059648366',
+		day : 73
+	},
+	{
+		link: '/manage-accounts',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/manage-accounts.jpeg?t=1719059651560',
+		day : 74
+	},
+	{
+		link: '/add-shot',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/add-shot.jpeg?t=1719059649711',
+		day : 75
+	},
+	{
+		link: '/e-book-store',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/e-book-store.jpeg?t=1719059650250',
+		day : 76
+	},
+	{
+		link: '/app-integrations',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/app-integrations.jpeg?t=1719059649968',
+		day : 77
+	},
+	{
+		link: '/audio-player',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/audio-player.jpeg?t=1719059648953',
+		day : 78
+	},
+	{
+		link: '/payment-plan',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/payment-plan.jpeg?t=1719059651563',
+		day : 79
+	},
+	{
+		link: '/articles-grid',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/articles-grid.jpeg?t=1719059650871',
+		day : 80
+	},
+	{
+		link: '/delivery-details',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/delivery-details.jpeg?t=1719059650923',
+		day : 81
+	},
+	{
+		link: '/color-palette',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/color-palette.jpeg?t=1719059648756',
+		day : 82
+	},
+	{
+		link: '/social-share',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/socials-share.jpeg?t=1719059651006',
+		day : 83
+	},
+	{
+		link: '/buy-a-coffee',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/buy-a-coffee.jpeg?t=1719059649724',
+		day : 84
+	},
+	{
+		link: '/customer-reviews',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/customer-reviews.jpeg?t=1719059651764',
+		day : 85
+	},
+	{
+		link: '/chatbot',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/chatbot.jpeg?t=1719059650620',
+		day : 86
+	},
+	{
+		link: '/charts',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/charts.jpeg?t=1719059651450',
+		day : 87
+  },
+  {
+		link: '/fingerprint',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/fingerprint.jpeg?t=1719059651542/storage/v1/render/image/public/challenges_screenshots/design_challenges/chatbot.jpeg?t=1719059650620',
+		day : 88
+	},
+	{
+		link: '/voice-call',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/voice-call.jpeg?t=1719059648948',
+		day : 89
+	},
+	{
+		link: '/my-devices',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/my-devices.jpeg?t=1719059649903',
+		day : 90
+	},
+	{
+		link: '/quizapp',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/quizapp.jpeg?t=1719059651190',
+		day : 91
+	},
+	{
+		link: '/search-filters',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/search-filters.jpeg?t=1719059650907',
+		day : 92
+	},
+	{
+		link: '/task-manager',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/task-manager.jpeg?t=1719059651442',
+		day : 93
+	},
+	{
+		link: '/time-widget',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/time-widget.jpeg?t=1719059650618',
+		day : 94
+	},
+	{
+		link: '/404',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/404.jpeg?t=1719059648870',
+		day : 95
+	},
+  {
+		link: '/subscribe-card',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/subscribe-card.jpeg?t=1719059650914',
+		day : 96
+	},
+	{
+		link: '/design-assets',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/design-assets.jpeg?t=1719059651272',
+		day : 97
+},
+	{
+		link: '/voice-recording',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/voice-recording.jpeg?t=1719059648582',
+		day : 98
+    },
+    {
+		link: '/columns-card',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/columns-card.jpeg?t=1719059650477',
+		day : 99
+	},
+	{
+		link: '/footer',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/footer.jpeg?t=1719059650524',
+		day : 100
 	},
 ].reverse()
-
+const customList                 = [
+	{
+		link : '/calcule-days',
+		title: 'Project calcule days'
+	}
+]
 </script>
 
 <template>
-	<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
-		<ChallengeCard v-for="(c, i) in list"
-			k
-			:key="i"
-			:link="c.link"
-			:img="c.img"
-			:day="c.day"></ChallengeCard>
+	<div class="flex flex-col w-full h-full">
+		<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
+			<NuxtLink
+				v-for="(c,i) in customList"
+				:key="i"
+				:to="c.link">
+				<div class="bg-gray-600 rounded-2xl p-2 flex flex-col items-center justify-center text-white gap-2">
+					<span>{{ c.title }}</span>
+				</div>
+			</NuxtLink>
+		</div>
+		<div class="flex items-center justify-center gap-4 p-4 flex-wrap">
+			<ChallengeCard v-for="(c, i) in list"
+				k
+				:key="i"
+				:link="c.link"
+				:img="c.img"
+				:day="c.day"></ChallengeCard>
+		</div>
 	</div>
 </template>
 
