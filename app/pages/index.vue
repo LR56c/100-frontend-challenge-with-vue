@@ -437,7 +437,47 @@ const list: ChallengeCardProps[] = [
 		link: '/search-filters',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/search-filters.jpeg?t=1719059650907',
 		day : 92
-	}
+	},
+	{
+		link: '/task-manager',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/task-manager.jpeg?t=1719059651442',
+		day : 93
+	},
+	{
+		link: '/time-widget',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/time-widget.jpeg?t=1719059650618',
+		day : 94
+	},
+	{
+		link: '/404',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/404.jpeg?t=1719059648870',
+		day : 95
+	},
+  {
+		link: '/subscribe-card',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/subscribe-card.jpeg?t=1719059650914',
+		day : 96
+	},
+	{
+		link: '/design-assets',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/design-assets.jpeg?t=1719059651272',
+		day : 97
+},
+	{
+		link: '/voice-recording',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/voice-recording.jpeg?t=1719059648582',
+		day : 98
+    },
+    {
+		link: '/columns-card',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/columns-card.jpeg?t=1719059650477',
+		day : 99
+	},
+	{
+		link: '/footer',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/footer.jpeg?t=1719059650524',
+		day : 100
+	},
 ].reverse()
 const customList                 = [
 	{

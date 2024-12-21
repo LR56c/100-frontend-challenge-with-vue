@@ -14,6 +14,7 @@
 		"@formkit/auto-animate": "^0.8.2",
 		"@github/relative-time-element": "^4.4.3",
 		"@internationalized/date": "^3.5.6",
+		"@meersagor/wavesurfer-vue": "^0.1.2",
 		"@nuxt/icon": "^1.5.1",
 		"@nuxt/image": "^1.8.1",
 		"@pinia/nuxt": "^0.5.5",
@@ -71,14 +72,17 @@
 		"vue-color-input": "^2.0.0",
 		"vue-router": "latest",
 		"vue-sonner": "^1.2.1",
+		"vue3-circle-progress": "^1.0.7",
 		"vue3-easymde": "^1.0.1",
 		"vue3-toastify": "^0.2.3",
+		"wavesurfer.js": "^7.8.11",
 		"zod": "^3.23.8"
 	},
 	"devDependencies": {
 		"@nuxtjs/tailwindcss": "^6.12.1",
 		"@types/tinycolor2": "^1.4.6",
 		"capture-website": "^4.1.0",
+		"daisyui": "^4.12.22",
 		"fluid-tailwind": "^1.0.3",
 		"vue-mess-detector": "^0.62.0"
 	},
