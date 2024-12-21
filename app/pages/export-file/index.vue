@@ -85,34 +85,34 @@ const processExportClient = async ( data: ExportFileOutput ) => {
 			data.quality, data.size )
 	progressValue.value = 100
 }
-const processExportServer = async ( data: ExportFileOutput ) => {
-	console.log( 'data', data )
-	const formData = new FormData()
-	formData.append( 'image', selectedImage.value as Blob )
-	formData.append( 'format', data.format )
-	formData.append( 'quality', data.quality.toString() )
-	formData.append( 'size', data.size.toString() )
-
-	const response = await $fetch<ReadableStream>( '/api/process-image', {
-		method      : 'POST',
-		body        : formData,
-		responseType: 'stream'
-	} )
-
-	const reader = response.pipeThrough( new TextDecoderStream() )
-	                       .getReader()
-
-	while ( true ) {
-		const { value, done } = await reader.read()
-
-		if ( done ) {
-			break
-		}
-
-		console.log( 'Received:', value )
-	}
-	console.log( 'finish' )
-}
+// const processExportServer = async ( data: ExportFileOutput ) => {
+// 	console.log( 'data', data )
+// 	const formData = new FormData()
+// 	formData.append( 'image', selectedImage.value as Blob )
+// 	formData.append( 'format', data.format )
+// 	formData.append( 'quality', data.quality.toString() )
+// 	formData.append( 'size', data.size.toString() )
+//
+// 	const response = await $fetch<ReadableStream>( '/api/process-image', {
+// 		method      : 'POST',
+// 		body        : formData,
+// 		responseType: 'stream'
+// 	} )
+//
+// 	const reader = response.pipeThrough( new TextDecoderStream() )
+// 	                       .getReader()
+//
+// 	while ( true ) {
+// 		const { value, done } = await reader.read()
+//
+// 		if ( done ) {
+// 			break
+// 		}
+//
+// 		console.log( 'Received:', value )
+// 	}
+// 	console.log( 'finish' )
+// }
 
 const cancelExport = () => {
 	selectedImage.value = undefined
