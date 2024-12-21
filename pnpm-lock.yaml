@@ -194,6 +194,9 @@ importers:
       vue-sonner:
         specifier: ^1.2.1
         version: 1.2.1
+      vue3-circle-progress:
+        specifier: ^1.0.7
+        version: 1.0.7(core-js@3.39.0)(vue@3.5.11(typescript@5.6.3))
       vue3-easymde:
         specifier: ^1.0.1
         version: 1.0.1(easymde@2.18.0)(vue@3.5.11(typescript@5.6.3))
@@ -3263,6 +3266,9 @@ packages:
   copy-anything@3.0.5:
     resolution: {integrity: sha512-yCEafptTtb4bk7GLEQoM8KVJpxAfdBJYaXyzQEgQQQgYrZiDp8SJmGKlYza6CYjEDNstAdNdKA3UuoULlEbS6w==}
     engines: {node: '>=12.13'}
+
+  core-js@3.39.0:
+    resolution: {integrity: sha512-raM0ew0/jJUqkJ0E6e8UDtl+y/7ktFivgWvqw8dNSQeNWoSDLvQ1H/RN3aPXB9tBd4/FhyR4RDPGhsNIMsAn7g==}
 
   core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -6444,6 +6450,12 @@ packages:
 
   vue-sonner@1.2.1:
     resolution: {integrity: sha512-J5+TwkayiBkieYBG8PGk5PMys8+UZxDmT/CCaX9otDzRONRr5hgTgo2Fha2krUFnUw1d576jsNGXhmAL06ixfA==}
+
+  vue3-circle-progress@1.0.7:
+    resolution: {integrity: sha512-Z916xKQhuEcaOvwIfCFUX9r/gPUNd40G2aJbROcRtotm5FE4dZPP4S4iDEISexE9XMF813swkdc5VzCdFxfE8g==}
+    peerDependencies:
+      core-js: ^3.9.0
+      vue: ^3.0.5
 
   vue3-easymde@1.0.1:
     resolution: {integrity: sha512-4y4MO897eb+0Pnh97MsIBKfQuQGyx5cUk64rFyVqQTLOctv5/zz993vxbSATlvfiEeduG+QraGbYLuLX9C4yUQ==}
@@ -11203,6 +11215,8 @@ snapshots:
     dependencies:
       is-what: 4.1.16
 
+  core-js@3.39.0: {}
+
   core-util-is@1.0.3: {}
 
   cosmiconfig@9.0.0(typescript@5.6.3):
@@ -14972,6 +14986,11 @@ snapshots:
       vue: 3.5.11(typescript@5.6.3)
 
   vue-sonner@1.2.1: {}
+
+  vue3-circle-progress@1.0.7(core-js@3.39.0)(vue@3.5.11(typescript@5.6.3)):
+    dependencies:
+      core-js: 3.39.0
+      vue: 3.5.11(typescript@5.6.3)
 
   vue3-easymde@1.0.1(easymde@2.18.0)(vue@3.5.11(typescript@5.6.3)):
     dependencies:

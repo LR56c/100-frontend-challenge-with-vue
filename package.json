@@ -61,6 +61,7 @@
 		"shadcn-vue": "^0.10.5",
 		"sharp": "^0.33.5",
 		"swiper": "^11.1.14",
+		"vue3-circle-progress": "^1.0.7",
 		"tailwind-merge": "^2.5.2",
 		"tailwindcss-animate": "^1.0.7",
 		"tinycolor2": "^1.6.0",
