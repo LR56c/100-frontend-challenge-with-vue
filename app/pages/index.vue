@@ -414,6 +414,11 @@ const list: ChallengeCardProps[] = [
 		day : 86
 	},
 	{
+		link: '/charts',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/charts.jpeg?t=1719059651450',
+		day : 87
+  },
+  {
 		link: '/fingerprint',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/fingerprint.jpeg?t=1719059651542/storage/v1/render/image/public/challenges_screenshots/design_challenges/chatbot.jpeg?t=1719059650620',
 		day : 88
