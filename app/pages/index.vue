@@ -263,6 +263,11 @@ const list: ChallengeCardProps[] = [
 		day : 55
 	},
 	{
+		link: '/project-roadmap',
+		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/project-roadmap.jpeg?t=1719059651925',
+		day : 56
+    },
+    {
 		link: '/game-profile',
 		img : 'https://mqzzwgavxmdmqvivwgez.supabase.co/storage/v1/render/image/public/challenges_screenshots/design_challenges/game-profile.jpeg?t=1719059649296',
 		day : 57
