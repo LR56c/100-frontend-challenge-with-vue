@@ -32,6 +32,7 @@
 		"@vee-validate/nuxt": "^4.13.2",
 		"@vee-validate/zod": "^4.13.2",
 		"@vue/devtools-api": "^7.4.6",
+		"@vue/server-renderer": "^3.5.13",
 		"@vuepic/vue-datepicker": "^9.0.3",
 		"@vueup/vue-quill": "^1.2.0",
 		"@vueuse/core": "^11.1.0",
@@ -83,6 +84,7 @@
 		"capture-website": "^4.1.0",
 		"daisyui": "^4.12.22",
 		"fluid-tailwind": "^1.0.3",
+		"sass-embedded": "^1.83.0",
 		"vue-mess-detector": "^0.62.0"
 	},
 	"module": "index.ts",
